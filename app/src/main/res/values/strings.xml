@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SOS</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">SOS</string>
+    <string name="title_dashboard">Tips</string>
+    <string name="title_notifications">Helplines</string>
+    <string name="title_about">About</string>
 </resources>

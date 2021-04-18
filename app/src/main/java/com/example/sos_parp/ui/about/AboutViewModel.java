@@ -1,16 +1,16 @@
-package com.example.sos_parp.ui.dashboard;
+package com.example.sos_parp.ui.about;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class DashboardViewModel extends ViewModel {
+public class AboutViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public DashboardViewModel() {
+    public AboutViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("All info about this app");
+        mText.setValue("Options");
     }
 
     public LiveData<String> getText() {
