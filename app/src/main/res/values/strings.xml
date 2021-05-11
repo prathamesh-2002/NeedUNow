@@ -4,4 +4,7 @@
     <string name="title_dashboard">Tips</string>
     <string name="title_notifications">Helplines</string>
     <string name="title_about">About</string>
+    <string name="quote_home">"&quot;Asking for help is the bravest move you can make.&quot;"</string>
+    <string name="tip_home">After pressing the buttom, an alert will be
+      sent to your friends in 10 seconds</string>
 </resources>
