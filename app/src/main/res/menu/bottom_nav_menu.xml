@@ -15,10 +15,4 @@
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/outline_phone_in_talk_24"
         android:title="@string/title_notifications" />
-
-    <item
-        android:id="@+id/navigation_about"
-        android:icon="@drawable/outline_tune_24"
-        android:title="@string/title_about" />
-
 </menu>
