@@ -9,326 +9,327 @@
     tools:context=".ui.notifications.NotificationsFragment">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/helpline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:fontFamily="@font/semibold"
+
+            android:text="NATIONAL HELPLINE NUMBER"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/semibold"
+            android:text="112"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal">
+
+        </TextView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" />
 
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:minHeight="500dp"
+            app:columnCount="2"
+            app:columnOrderPreserved="false"
+            app:rowCount="3">
 
-            <TextView
-                android:id="@+id/helpline"
-                android:layout_width="435dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="140dp"
-                android:fontFamily="@font/semibold"
-                android:text="       NATIONAL HELPLINE NUMBER"
-                android:textColor="@color/red"
-                android:textSize="24sp"
-                android:textStyle="bold">
-
-            </TextView>
-
-            <TextView
+            <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="11dp"
-                android:fontFamily="@font/semibold"
-                android:text="                                       112"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold">
+                android:layout_margin="15dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="0"
+                app:layout_rowWeight="1">
 
-            </TextView>
+                <LinearLayout
 
-            <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-            <androidx.gridlayout.widget.GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
-                android:minHeight="500dp"
-                app:columnCount="2"
-                app:columnOrderPreserved="false"
-                app:rowCount="3">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/hospital" />
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/gradiant1"
-                    app:cardBackgroundColor="@color/red"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp"
-                    app:layout_column="0"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill"
-                    app:layout_row="0"
-
-                    app:layout_rowWeight="1">
-
-                    <LinearLayout
-
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/light"
+                        android:gravity="center_horizontal"
+                        android:text="Hospital"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_notifications_black_24dp" />
+                    </TextView>
+                </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/light"
-                            android:gravity="center_horizontal"
-                            android:text="Helooo"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp"
-                            android:textStyle="bold">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="20dp"
 
-                        </TextView>
-                    </LinearLayout>
+                app:cardElevation="8dp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="0"
+                app:layout_rowWeight="1">
 
-                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    app:cardBackgroundColor="@color/red"
-                    app:cardCornerRadius="15dp"
+                    android:orientation="vertical">
 
-                    app:cardElevation="8dp"
-                    app:layout_column="1"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill"
-                    app:layout_row="0"
-                    app:layout_rowWeight="1">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/police" />
 
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
+                        android:fontFamily="@font/light"
+                        android:gravity="center_horizontal"
+                        android:text="Police"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                        android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="1"
+                app:layout_rowWeight="1">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_notifications_black_24dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/light"
-                            android:gravity="center_horizontal"
-                            android:text="Helooo"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp"
-                            android:textStyle="bold"></TextView>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/child1" />
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-
-                    app:cardBackgroundColor="@color/red"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp"
-                    app:layout_column="0"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill"
-                    app:layout_row="1"
-                    app:layout_rowWeight="1">
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/light"
+                        android:gravity="center_horizontal"
+                        android:text="Child"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_notifications_black_24dp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="1"
+                app:layout_rowWeight="1">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/light"
-                            android:gravity="center_horizontal"
-                            android:text="Helooo"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp"
-                            android:textStyle="bold"></TextView>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/gradiant1"
-                    app:cardBackgroundColor="@color/red"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp"
-                    app:layout_column="1"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill"
-                    app:layout_row="1"
-                    app:layout_rowWeight="1">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/fire" />
 
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/light"
+                        android:gravity="center_horizontal"
+                        android:text="Fire"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_notifications_black_24dp" />
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/light"
-                            android:gravity="center_horizontal"
-                            android:text="Helooo"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp"
-                            android:textStyle="bold">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="2"
+                app:layout_rowWeight="1">
 
-                        </TextView>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/gradiant1"
-                    app:cardBackgroundColor="@color/red"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp"
-                    app:layout_column="0"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill"
-                    app:layout_row="2"
-                    app:layout_rowWeight="1">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/car" />
 
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/light"
+                        android:gravity="center_horizontal"
+                        android:text="Car"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_notifications_black_24dp" />
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/light"
-                            android:gravity="center_horizontal"
-                            android:text="Helooo"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp"
-                            android:textStyle="bold">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="2"
+                app:layout_rowWeight="1">
 
-                        </TextView>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/gradiant1"
-                    app:cardBackgroundColor="@color/red"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp"
-                    app:layout_column="1"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill"
-                    app:layout_row="2"
-                    app:layout_rowWeight="1">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/women" />
 
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/light"
+                        android:gravity="center_horizontal"
+                        android:text="Women"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:autoSizeTextType="none">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_notifications_black_24dp" />
+                    </TextView>
+                </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/light"
-                            android:gravity="center_horizontal"
-                            android:text="Helooo"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-                            app:autoSizeTextType="none">
-
-                        </TextView>
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
-            </androidx.gridlayout.widget.GridLayout>
+        </androidx.gridlayout.widget.GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="130dp"
-                android:layout_marginLeft="130dp"
-                android:layout_marginBottom="50dp"
-                android:background="@drawable/gradiant1"
-                android:text="More HelpLine !!!"
-
-                app:cornerRadius="25dp" />
-
+                android:layout_marginBottom="60dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="More HelpLines !!!"
+                app:cornerRadius="25dp"
+                tools:ignore="RtlCompat" />
         </LinearLayout>
+
+    </LinearLayout>
 
 
 </ScrollView>
