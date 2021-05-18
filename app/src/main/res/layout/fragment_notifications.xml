@@ -182,7 +182,9 @@
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="24sp"
-                        android:textStyle="bold"></TextView>
+                        android:textStyle="bold">
+
+                    </TextView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
