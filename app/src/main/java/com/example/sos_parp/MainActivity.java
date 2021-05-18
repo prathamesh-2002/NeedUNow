@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Toolbar toolbar;
-//    private Toolbar toolbar = findViewById(R.id.toolbar);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,44 +65,3 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
-/*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.toolbar_nav_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        int id = item.getItemId();
-
-        switch (id) {
-
-            case R.id.navigation_settings:
-                startActivity(new Intent(this, SettingsActivity.class));
-                return true;
-
-            case android.R.id.home:
-                startActivity(new Intent(this, HelpActivity.class));
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-   /*     ActionBar actionBar;
-        actionBar = getSupportActionBar();
-        actionBar.hide();
-        ColorDrawable colorDrawable
-                = new ColorDrawable(Color.parseColor("#FFFFFF"));
-
-        actionBar.setBackgroundDrawable(colorDrawable);
-  */
-   /*     AppBarConfiguration appBarConfiguration = ew AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications, R.id.navigation_about)
-                .build();*/
-      //  setActionBar(Toolbar toolbar);
-   //     NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-    //    NavigationUI.setupActionBarWithNavController(this, navController);
-  //      NavigationUI.setupWithNavController(navView, navController);
-
-
