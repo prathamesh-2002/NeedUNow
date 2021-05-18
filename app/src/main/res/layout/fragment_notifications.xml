@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingTop="70dp"
     tools:context=".ui.notifications.NotificationsFragment">
 
 
@@ -20,9 +21,7 @@
             android:id="@+id/helpline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
             android:fontFamily="@font/semibold"
-
             android:text="NATIONAL HELPLINE NUMBER"
             android:textAlignment="center"
             android:textColor="@color/red"
