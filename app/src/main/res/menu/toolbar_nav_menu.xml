@@ -8,11 +8,4 @@
         android:title="Settings"
         app:showAsAction="always"
         />
-
-    <item
-        android:id="@+id/navigation_help"
-        android:icon="@drawable/outline_help_outline_24"
-        android:title="Help"
-        app:showAsAction="always"
-        />
 </menu>
