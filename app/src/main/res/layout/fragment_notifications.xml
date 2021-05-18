@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="20dp">
 
 
         <TextView
@@ -39,7 +40,7 @@
             android:fontFamily="@font/semibold"
             android:text="112"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSecondary"
             android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center_horizontal">
@@ -82,27 +83,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/shape"
+                    android:background="@drawable/gradient1"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/hospital" />
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/hospital"
+                        app:tint="@color/white" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/light"
+                        android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
                         android:text="Hospital"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold">
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
 
-                    </TextView>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -112,7 +112,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 app:cardCornerRadius="20dp"
-
                 app:cardElevation="8dp"
                 app:layout_column="1"
                 app:layout_columnWeight="1"
@@ -124,26 +123,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/shape"
+                    android:background="@drawable/gradient1"
                     android:gravity="center"
-
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/police" />
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/police"
+                        app:tint="@color/white"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/light"
+                        android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
                         android:text="Police"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold"/>
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -163,25 +161,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/shape"
+                    android:background="@drawable/gradient1"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/child1" />
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="5dp"
+                        android:src="@drawable/child1"
+                        app:tint="@color/white"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/light"
+                        android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
                         android:text="Child"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold"/>
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -201,27 +200,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/shape"
+                    android:background="@drawable/gradient1"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/fire" />
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="7dp"
+                        android:src="@drawable/fire"
+                        app:tint="@color/white"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/light"
+                        android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
                         android:text="Fire"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold">
-
-                    </TextView>
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -241,27 +239,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/shape"
+                    android:background="@drawable/gradient1"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/car" />
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/car"
+                        app:tint="@color/white"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/light"
+                        android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
                         android:text="Car"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold">
-
-                    </TextView>
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -286,23 +282,22 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/women" />
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="5dp"
+                        android:src="@drawable/women"
+                        app:tint="@color/white"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/light"
+                        android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
                         android:text="Women"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        app:autoSizeTextType="none">
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
 
-                    </TextView>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -318,13 +313,14 @@
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
                 android:layout_marginBottom="60dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:text="More HelpLines !!!"
+                android:text="Other HelpLines"
                 app:cornerRadius="25dp"
+                android:textColor="@color/white"
                 tools:ignore="RtlCompat" />
         </LinearLayout>
 
