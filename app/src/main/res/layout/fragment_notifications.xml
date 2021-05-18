@@ -325,7 +325,7 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:text="More HelpLines !!!"
-                app:cornerRadius="25dp"
+                app:cornerRadius="24dp"
                 tools:ignore="RtlCompat" />
         </LinearLayout>
 
