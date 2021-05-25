@@ -31,5 +31,7 @@
     <string name="case12">4. In any situation you might need to </string>
     <string name="case121">call child authority</string>
     <string name="childno">CALL 1098</string>
+    <string name="setting">Setting</string>
+
 
 </resources>
