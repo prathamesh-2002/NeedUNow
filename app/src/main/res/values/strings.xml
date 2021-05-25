@@ -9,5 +9,6 @@
     <string name="tip_home">After pressing the buttom, an alert will be
       sent to your friends in 10 seconds</string>
     <string name="textview">name</string>
+    <string name="setting">Setting</string>
 
 </resources>
