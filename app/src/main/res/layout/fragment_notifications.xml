@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/semibold"
-            android:text="NATIONAL HELPLINE NUMBER"
+            android:text="@string/national_helpline_number"
             android:textAlignment="center"
             android:textColor="@color/red"
             android:textSize="24sp"
@@ -67,16 +67,18 @@
             app:rowCount="3">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/c1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="8dp"
                 app:layout_column="0"
                 app:layout_columnWeight="1"
                 app:layout_gravity="fill"
                 app:layout_row="0"
-                app:layout_rowWeight="1">
+                app:layout_rowWeight="1"
+                >
 
                 <LinearLayout
 
@@ -108,9 +110,10 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/c2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="8dp"
                 app:layout_column="1"
@@ -146,9 +149,10 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/c3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="8dp"
                 app:layout_column="0"
@@ -185,9 +189,10 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/c4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="8dp"
                 app:layout_column="1"
@@ -209,7 +214,7 @@
                         android:layout_height="60dp"
                         android:padding="7dp"
                         android:src="@drawable/fire"
-                        app:tint="@color/white"/>
+                        app:tint="@color/white" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -219,14 +224,15 @@
                         android:text="Fire"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="24sp"/>
+                        android:textSize="24sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/c5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="8dp"
                 app:layout_column="0"
@@ -262,9 +268,10 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/c6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="8dp"
                 app:layout_column="1"
@@ -309,19 +316,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+
+            >
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="240dp"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="60dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:text="Other HelpLines"
-                app:cornerRadius="25dp"
                 android:textColor="@color/white"
-                tools:ignore="RtlCompat" />
+                app:cornerRadius="20dp" />
         </LinearLayout>
 
     </LinearLayout>

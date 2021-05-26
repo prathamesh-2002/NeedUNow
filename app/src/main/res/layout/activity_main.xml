@@ -23,13 +23,14 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:elevation="8dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/rounded_toolbar"
+                android:elevation="8dp"
                 android:minHeight="?attr/actionBarSize"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:menu="@menu/toolbar_nav_menu"/>
+                app:menu="@menu/toolbar_nav_menu" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -69,6 +70,7 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />

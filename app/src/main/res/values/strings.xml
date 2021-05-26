@@ -9,5 +9,29 @@
     <string name="tip_home">After pressing the buttom, an alert will be
       sent to your friends in 10 seconds</string>
     <string name="textview">name</string>
+    <string name="hospital">Hospital</string>
+    <string name="hospitalno">CALL 102</string>
+    <string name="hospital_heading">Hospital HelpLine</string>
+    <string name="case1">1. In case of accident</string>
+    <string name="case2">2. Breathing difficulties</string>
+    <string name="case3">3. Someone collapses</string>
+    <string name="case4">4. Anything that can cause something severe</string>
+    <string name="national_helpline_number">NATIONAL HELPLINE NUMBER</string>
+    <string name="todo">TODO</string>
+    <string name="police_helpline">Police HelpLine</string>
+    <string name="case5">1. If want to report any crime</string>
+    <string name="case6">2. Want a legal Help</string>
+    <string name="case7">3. In trouble situation</string>
+    <string name="policeno">CALL 100</string>
+    <string name="case8">4. In any situation you might need police help</string>
+    <string name="case9">1. Child abuse caught</string>
+    <string name="child_helpline">Child HelpLine</string>
+    <string name="case10">2. Child labour caught</string>
+    <string name="case11">3. Child trafficking</string>
+    <string name="case12">4. In any situation you might need to </string>
+    <string name="case121">call child authority</string>
+    <string name="childno">CALL 1098</string>
+    <string name="setting">Setting</string>
+
 
 </resources>
