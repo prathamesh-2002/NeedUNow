@@ -32,6 +32,13 @@
     <string name="case121">call child authority</string>
     <string name="childno">CALL 1098</string>
     <string name="setting">Setting</string>
+    <string name="fire_helpline">Fire HelpLine</string>
+    <string name="case13">1. Caught massive fire in public palce</string>
+    <string name="case14">2. Spreading fire near flammable substances</string>
+    <string name="case15">3. Need help if caught in fire</string>
+    <string name="call_101">CALL 101</string>
+    <string name="road_accident">Road Accident</string>
+    <string name="women_helpline">Women Helpline</string>
 
 
 </resources>
