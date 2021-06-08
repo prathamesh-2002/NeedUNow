@@ -1,6 +1,7 @@
 package com.example.sos_parp;
 
 import android.os.Bundle;
+import android.view.Menu;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,9 +16,14 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        sToolbar = findViewById(R.id.set_toolbar);
+        sToolbar = findViewById(R.id.setting_toolbar);
         setSupportActionBar(sToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.setting_toolbar_menu);
+        return true;
     }
 }

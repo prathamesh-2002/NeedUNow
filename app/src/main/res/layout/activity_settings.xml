@@ -8,50 +8,56 @@
     android:background="?attr/colorSecondary"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="512dp"
+            />
+
+    </androidx.core.widget.NestedScrollView>
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/rounded_toolbar"
-        app:elevation="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorSecondary"
+        app:liftOnScroll="true"
+        >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="wrap_content"
+            app:expandedTitleGravity="bottom"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed "
+            >
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/set_toolbar"
+                android:id="@+id/setting_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:background="@drawable/rounded_toolbar"
-                android:elevation="8dp"
-                android:minHeight="?attr/actionBarSize"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="?attr/actionBarSize"
+                />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:elevation="10dp"
-                android:fontFamily="@font/semibold"
                 android:text="Settings"
                 android:textColor="?attr/colorPrimary"
                 android:textSize="30dp"
-                app:layout_constraintBottom_toBottomOf="@+id/set_toolbar"
-                app:layout_constraintEnd_toEndOf="@+id/set_toolbar"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:fontFamily="@font/semibold"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/setting_toolbar"
+                app:layout_constraintEnd_toEndOf="@+id/setting_toolbar"
+                app:layout_constraintStart_toStartOf="@+id/setting_toolbar"
+                app:layout_constraintTop_toTopOf="@+id/setting_toolbar" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -101,8 +107,8 @@
                         android:id="@+id/set_textView1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginLeft="70dp"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginLeft="73dp"
                         android:alpha="0.8"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_vertical"
@@ -165,8 +171,8 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginLeft="70dp"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginLeft="73dp"
                         android:alpha="0.8"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_vertical"
@@ -229,8 +235,8 @@
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="75dp"
-                        android:layout_marginLeft="75dp"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginLeft="73dp"
                         android:alpha="0.8"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_vertical"
@@ -294,8 +300,8 @@
                         android:id="@+id/textView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginLeft="70dp"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginLeft="73dp"
                         android:alpha="0.8"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_vertical"
@@ -357,8 +363,8 @@
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginLeft="70dp"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginLeft="73dp"
                         android:alpha="0.8"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_vertical"
@@ -422,8 +428,8 @@
                         android:id="@+id/textView7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginLeft="70dp"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginLeft="73dp"
                         android:alpha="0.8"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_vertical"
@@ -486,8 +492,8 @@
                         android:id="@+id/textView8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginLeft="70dp"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginLeft="73dp"
                         android:alpha="0.8"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_vertical"
