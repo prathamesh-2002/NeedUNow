@@ -33,5 +33,9 @@
     <string name="childno">CALL 1098</string>
     <string name="setting">Setting</string>
 
+    <!--activity_timer-->
+    <string name="timer_name">\User\'s name,</string>
+    <string name="timer_name1">you\'re about to send emergency alerts</string>
+
 
 </resources>
