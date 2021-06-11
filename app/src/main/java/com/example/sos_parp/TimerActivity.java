@@ -28,7 +28,7 @@ public class TimerActivity extends AppCompatActivity {
     private static final int MSG_SEND_ATTEMPTS = 0;
     private int getMsgSendAttempts = MSG_SEND_ATTEMPTS;
 
-    private static final long START_TIME_IN_MILLIS = 4000;
+    private static final long START_TIME_IN_MILLIS = 16000;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
     private TextView mTextViewCountDown;
 
