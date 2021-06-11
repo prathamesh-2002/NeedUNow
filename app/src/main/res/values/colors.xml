@@ -9,6 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#EE4C4C</color>
     <color name="red2">#a60200</color>
-    <color name="darkBackground">#2A2A2A</color>>
+    <color name="darkBackground">#2A2A2A</color>
+    <color name="darkGrey">#605F5F</color>
+    <color name="lightBackground">#C3BDBD</color>
     <color name="darkToolNav">#1E1E1E</color>
+    <color name="lightGrey">#CCC6C6</color>
+    <color name="lightRed">#EF6565</color>
 </resources>

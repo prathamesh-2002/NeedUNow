@@ -23,7 +23,7 @@ public class PoliceActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String number = "100";
                 Uri call = Uri.parse("tel:" + number);
-                Intent intent = new Intent(Intent.ACTION_CALL, call);
+                Intent intent = new Intent(Intent.ACTION_DIAL, call);
                 startActivity(intent);
             }
         });

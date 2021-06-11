@@ -8,7 +8,16 @@
         android:endColor="#F47979">
     </gradient>
 
+    <corners
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp" />
+
 </shape>
 
     <!--      android:startColor="#FE2828"
             android:endColor="#FE7878" -->
+
+
+
