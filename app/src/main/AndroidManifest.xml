@@ -51,5 +51,40 @@
             android:label="@string/title_help"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".T_VehicleActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".T_WomenActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".T_FireActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".T_HarmActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".T_MedicalActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".T_EarthquakeActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".T_FloodActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".T_FirstAid"
+            android:parentActivityName=".MainActivity" />
+
+
+
     </application>
 </manifest>

@@ -23,7 +23,6 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:layout_marginTop="16dp"
                 android:background="@drawable/rounded_toolbar"
                 android:elevation="8dp"
                 android:minHeight="?attr/actionBarSize"
@@ -76,5 +75,3 @@
         app:navGraph="@navigation/mobile_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--   android:minHeight="?attr/actionBarSize"  -->

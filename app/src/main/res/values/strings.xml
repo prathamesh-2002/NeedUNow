@@ -6,8 +6,7 @@
     <string name="title_settings">Settings</string>
     <string name="title_help">Help</string>
     <string name="quote_home">\&quot;Asking for help is the bravest move you can make.\&quot;</string>
-    <string name="tip_home">After pressing the buttom, an alert will be
-      sent to your friends in 10 seconds</string>
+    <string name="tip_home">After pressing the buttom, an alert will be sent to your friends in 10 seconds</string>
     <string name="textview">name</string>
     <string name="hospital">Hospital</string>
     <string name="hospitalno">CALL 102</string>
@@ -39,6 +38,176 @@
     <string name="call_101">CALL 101</string>
     <string name="road_accident">Road Accident</string>
     <string name="women_helpline">Women Helpline</string>
+
+    <!-- Tips Content Screen -->
+    <string name="Tips_title">Emergency Situations</string>
+    <string name="Tips_title2">What to do in</string>
+
+    <!-- Car Accident -->
+    <string name="Accident_title">How to use our App in case of,</string>
+    <string name="Accident_title2">Road Accidents</string>
+    <string name="line1">- Press the SOS Button to send a Panic Message to your Emergency Contacts.</string>
+    <string name="line2">- Specify the type of Emergency, if possible.</string>
+    <string name="line3">- Call the Helpline Number immediately.</string>
+    <string name="Tips_title3">What to do?</string>
+    <string name="Tips_1">Take some deep breaths to get calm</string>
+    <string name="Tips_1_body">Take a few deep breaths or count to 10 to calm down. The calmer you are, the better prepared you will be to handle the situation.</string>
+    <string name="Tips_2">Keep yourself and other safe</string>
+    <string name="Tips_2_body">If you can\'t get out of your car, or its not safe to try, keep your seatbelt fastened, turn on your hazard lights and then press SOS button. Wait for the help to arrive.</string>
+    <string name="Tips_3">Check for injuries</string>
+    <string name="Tips_3_body">Check on everyone involved in the crash to see if they have any injuries. If the injury is minor, use First-Aid. If needed, call the Ambulance immediately.</string>
+    <string name="Tips_4">Prevent further traffic</string>
+    <string name="Tips_4_body">If there are no injuries and your vehicle is driveable, make a reasonable effort to move the vehicle to a safe spot that is not blocking traffic (like the shoulder of a highway or a parking lot).</string>
+    <string name="Tips_5">Take down information</string>
+    <string name="Tips_5_body">Ask to see the license of the other drivers involved in the crash. Also get their name, address, phone number, insurance company, insurance policy number, and license plate number.</string>
+    <string name="End1">BE SAFE, YOU ARE PRECIOUS!</string>
+
+    <!--Women Safety-->
+    <string name="Women_title">How to use our App for,</string>
+    <string name="Women_title2">Woman\'s Safety</string>
+    <string name="W__line1">- When feeling unsafe, press the SOS Button to send Panic Message.</string>
+    <string name="W_line2">- Share your Live Location with your friends.</string>
+    <string name="W_line3">- Call the Helpline Number immediately.</string>
+    <string name="Women_1">Be aware of your surroundings</string>
+    <string name="Women_1_body">If you\'re alone, or hiring a cab, beware of your surroundings. If things seem even a slight unsafe get out of that place immediately. Don\'t let your guard down.</string>
+    <string name="Women_2">Notify your friends/family</string>
+    <string name="Women_2_body">When you sense something NOT OKAY, immediately send your location and message your friends/family. Don\'t ignore such alarms.</string>
+    <string name="Women_3">Unavoidable Situations</string>
+    <string name="Women_3_body">In case you are in a sticky situation or feel exposed to the attacker, make an effort to press the SOS button. Scream so that people nearby can sense something wrong and help you. </string>
+    <string name="Women_4">Carry self-defense products</string>
+    <string name="Women_4_body">Carry a self-defense product, such as pepper spray or a stun gun. These non-lethal, inexpensive and small products can allow you to deter an attacker long enough for you to get away.</string>
+    <string name="Women_5">Defend Yourself</string>
+    <string name="Women_5_body">Don’t be afraid to use anything in your hand to defend yourself. Use keys, bottle even your purse to inflict damage to your attacker</string>
+    <string name="Women_6">Following are the most vulnerable areas to attack:</string>
+    <string name="Women_6_1">a. Use your knees to hit hard between the legs of the attacker.</string>
+    <string name="Women_6_2">b. Using your fingers to poke hard in the eyes.</string>
+    <string name="Women_6_3">c. Hitting front part of the neck on the Adams apple will leave him in a shock.</string>
+    <string name="Women_6_4">d. Punching in the stomach will leave the attacker breathless and unable to chase you.</string>
+    <string name="Women_6_5">e. Hitting hard in the chest area.</string>
+
+    <!-- Fire OutBreak -->
+    <string name="Fire_title">How to use our App in case of,</string>
+    <string name="Fire_title2">Fire Outbreak</string>
+    <string name="F_line1">- Press the SOS Button to send a Panic Message to your Emergency Contacts.</string>
+    <string name="F_line2">- Specify the Emergency Type as \'Fire\'.</string>
+    <string name="F_line3">- Call the Helpline Number immediately.</string>
+    <string name="F_Tips_title3">What to do?</string>
+    <string name="Fire_1">Act Immediately</string>
+    <string name="Fire_1_body">Calm down, but act swiftly. Stay low in case of smoke or fumes and try to make your way out as soon as possible. Call the Helpline Numbers immediately, if possible.  </string>
+    <string name="Fire_2">Check Doors when moving out</string>
+    <string name="Fire_2_body">Feel the doorknob or higher on the door with the back of your hand. If it feels hot, fire may be on the other side of the door, so keep it shut. Stuff clothing, towels, or newspapers in the door’s cracks to keep smoke out.</string>
+    <string name="Fire_3">Know your way out</string>
+    <string name="Fire_3_body">Immediately evacuate the place. Use the stairs –NEVER use elevators. Elevators are normally tied to a fire detection system and are not available to occupants once the alarm sounds.</string>
+    <string name="Fire_4">Pull Fire Alarm</string>
+    <string name="Fire_4_body">If the alarm is not already activated, pull the fire alarm on your way out to make everyone aware. If there is no alarm to activate, yell “fire” as you leave.</string>
+    <string name="Fire_5">Move to a safer place</string>
+    <string name="Fire_5_body">Move quickly to an open area. Dial Helpline number, report the address and stay on the phone until the fire department arrives at the place. </string>
+
+    <!-- Intentional Harm -->
+    <string name="Harm_title">How to use our App in case of,</string>
+    <string name="Harm_title2">Intentional Harm</string>
+    <string name="H_line1">- Press the SOS Button to send a Panic Message to your Emergency Contacts.</string>
+    <string name="H_line2">- Send your location to your friends/family.</string>
+    <string name="H_line3">- Call the Helpline Number immediately.</string>
+    <string name="H_Tips_title3">What to do?</string>
+    <string name="Harm_1">Escape the attacker</string>
+    <string name="Harm_1_body">If you\'re ever in a situation where someone tries to abduct you, do anything you can to avoid going with them. Try escaping, then run as fast as you can in the direction of the nearest people or building you see. </string>
+    <string name="Harm_2">Call for help</string>
+    <string name="Harm_2_body">Start shouting right away, especially if you know there are people nearby. Try yelling something like, Help! or Call the police!. Press SOS Button to send your location to the registered contacts. </string>
+    <string name="Harm_3">Defend yourself</string>
+    <string name="Harm_3_body">Fight in any way you\'re able, whether that\'s hitting, kicking, biting, or scratching. Use products such as pepper spray which can allow you to deter an attacker long enough to run away.</string>
+    <string name="Harm_4">Be observant</string>
+    <string name="Harm_4_body">If at any point it becomes clear that your captors have gained the upper hand, be extremely observant about the things the attacker do. In absence of the attacker, find a way to communicate with other people. </string>
+    <string name="Harm_5">Rescue Yourself</string>
+    <string name="Harm_5_body">It can be really hard not to panic, but you want to stay calm and focused to look for methods that can help you get free. Look for mobile phones, which can help you contact the Police and get yourself rescued. </string>
+
+    <!-- Medical Emergency -->
+    <string name="Medical_title">How to use our App in case of,</string>
+    <string name="Medical_title2">Medical Emergency</string>
+    <string name="M_line1">- Press the SOS Button to notify your Emergency Contacts about the emergency.</string>
+    <string name="M_line2">- Share location </string>
+    <string name="M_line3">- Call the Ambulance immediately.</string>
+    <string name="M_Tips_title3">What to do?</string>
+    <string name="Medical_1">Keep a first-aid kit handy</string>
+    <string name="Medical_1_body">First-aid kits help you handle the medical emergencies as quickly as possible. These kits offer basic and instant care for common medical injuries</string>
+    <string name="Medical_2">Check for signs of external bleeding</string>
+    <string name="Medical_2_body">Always check for the pulse of the victim/patient first. Once confirmed to be running, you must ideally check for signs of any external bleeding. If the injured person is bleeding profusely, then call for the emergency medical services immediately.</string>
+    <string name="Medical_3">Do not Block Airway</string>
+    <string name="Medical_3_body">Check for any objects that may be blocking the patient’s airway. If the breathing has stopped, you may need to administer artificial respiration.</string>
+    <string name="Medical_4">Stabilize the patient</string>
+    <string name="Medical_4_body">Provide basic First-Aid until an ambulance arrives. Remain calm and keep your patient relaxed in a sleeping position to reduce the chances of any further injury or damage. </string>
+    <string name="Medical_5">After Care</string>
+    <string name="Medical_5_body">Treat the victim/patient with basic trauma care within the first few hours of the incident. Try to distract the patient from the sufferings, also to keep them calm and strong</string>
+
+    <!-- Earthquake -->
+    <string name="Earthquake_title">How to use our App in case of,</string>
+    <string name="Earthquake_title2">Earthquake</string>
+    <string name="E_line1">- Press the SOS Button to send a Panic Message to your friends/family.</string>
+    <string name="E_line2">- Call the Helpline Numbers immediately.</string>
+    <string name="E_line3">- Share Location and give necessary details.</string>
+    <string name="Earthquake_title3">What to do?</string>
+    <string name="Earthquake_1">Remain Calm</string>
+    <string name="Earthquake_1_body">Panic and stress are the main reasons that make the situation worse during natural disasters. If you stay calm during an earthquake, you can find ways to help yourself and everyone involved stay safe.</string>
+    <string name="Earthquake_2">Stay Where You Are</string>
+    <string name="Earthquake_2_body_2">If you’re indoors during an earthquake, stay indoors. Stand against a wall near the center of the building or crawl under heavy furniture like a desk or table.</string>
+    <string name="Earthquake_2_body_4">If you’re outdoors, stay outdoors. Avoid power lines or anything that might fall, and stay away from buildings.</string>
+    <string name="Earthquake_3">Drop to the Ground</string>
+    <string name="Earthquake_3_body">At the first sign of an earthquake, drop to the ground and get on your hands and knees. This technique can be performed inside or outside and helps reduce the risk of injury.</string>
+    <string name="Earthquake_4">Cover your head and neck</string>
+    <string name="Earthquake_4_body">Cover your head and neck with one hand. If you’re indoors, crawl underneath a table or next to an interior wall away from windows to shelter in place. If you’re outdoors, stay on your knees and bend over to protect your vital organs. Hold on, until the trembling stops</string>
+    <string name="Earthquake_5">Avoid</string>
+    <string name="Earthquake_5_body">Avoid Doorways, Windows, bookcases, tall furniture and light fixtures. You could be hurt by shattered glass or heavy objects. Avoid Elevators. </string>
+
+    <!-- Flood Emergency -->
+    <string name="Flood_title">How to use our App in case of,</string>
+    <string name="Flood_title2">Floods</string>
+    <string name="F1_line1">- Press the SOS Button to send a Panic Message to your contacts.</string>
+    <string name="F1_line2">- If possible, look for safety measures.</string>
+    <string name="F1_line3">- Call the Ambulance immediately.</string>
+    <string name="F1_Tips_title3">What to do?</string>
+    <string name="Flood_1">Know the risk</string>
+    <string name="Flood_1_body">If a flood is likely in your area, listen to the radio or television for information. Be aware that flash flooding can occur. If there is any possibility of a flash flood, move immediately to higher ground.</string>
+    <string name="Flood_2">Find Safe shelter</string>
+    <string name="Flood_2_body">Depending on where you are, the impact and the warning time of flooding, go to a safe location. Call the helpline numbers immediately and find ways to help other people out.</string>
+    <string name="Flood_3">Turn Around, don\'t Drown</string>
+    <string name="Flood_3_body">Don\'t walk, swim or drive in flooded areas. Cars or other vehicles won’t protect you from floodwaters.Always follow warnings about flooded roads.Stay off of bridges over fast moving water.</string>
+    <string name="Flood_4">Seek Refuge</string>
+    <string name="Flood_4_body">If your vehicle is trapped in rapidly moving water, stay inside. If water is rising inside the vehicle, seek refuge on the roof.</string>
+    <string name="Flood_4_body_1">If trapped in a building go to its highest level . Do not climb into a closed attic, you may become trapped by rising floodwater.</string>
+    <string name="Flood_5">Signal for Help</string>
+    <string name="Flood_5_body">If you\'re trapped, stay calm and wait for the rescue team to arrive. Make the rescue team aware that you\'re trapped. Shout for help or give signals to let them know your location.</string>
+
+    <!-- First Aid -->
+    <string name="FAid_title">Importance of</string>
+    <string name="FAid_title2">First-Aid Kit</string>
+    <string name="FAid_line1">It\'s important to have a well-stocked first aid kit in your home so you can deal with minor accidents and injuries.</string>
+    <string name="FAid_line2">A first aid kit is your go to for reducing the severity of the injury and preventing infection.</string>
+    <string name="FAid_line3">Your first aid kit should be locked and kept in a cool, dry place out of the reach of children.</string>
+    <string name="FAid_Tips_title3">A basic first aid kit may contain:</string>
+    <string name="item1">Plasters in a variety of different sizes and shapes</string>
+    <string name="item2">Small, medium and large sterile gauze dressings</string>
+    <string name="item3">At least 2 sterile eye dressings</string>
+    <string name="item4">Triangular bandages and crêpe rolled bandages</string>
+    <string name="item5">Disposable sterile gloves</string>
+    <string name="item6">Safety pins, tweezers, scissors</string>
+    <string name="item7">Alcohol-free cleansing wipes</string>
+    <string name="item8">Thermometer (preferably digital)</string>
+    <string name="item9">Skin rash cream, such as hydrocortisone</string>
+    <string name="item10">Cream or spray to relieve insect bites and stings</string>
+    <string name="item11">Painkillers such as paracetamol</string>
+    <string name="item12">Thermometer (preferably digital)</string>
+    <string name="item13">Distilled water for cleaning wounds</string>
+
+    <!-- Instruction -->
+    <string name="instruction1">Instructions</string>
+    <string name="lines1">Register <b>Emergency Contact</b> Numbers.</string>
+    <string name="lines2">Grant all the required Permissions.</string>
+    <string name="lines3">In case of Emergency, press the <b>SOS button</b>. This will send a Panic Message to your registered contacts.</string>
+    <string name="lines4">Specify the type of Emergency in which you\'re trapped by clicking on one of the following options <b>(Women Safety, Accident, Fire)</b> . This will help your friends and family get more concrete information.</string>
+    <string name="lines5">Know more about how to react in various Emergency Situations through <b>TIPS PAGE</b>.</string>
+    <string name="lines6">Get Quick Access to Helpline Numbers under <b>HELPLINE PAGE</b>.</string>
+    <string name="lines7">Edit your Personal Info, Contact Numbers, Panic Message anytime under <b>SETTINGS MENU</b>.</string>
+    <string name="lines8">We recommend you to always keep your GPS turned ON.</string>
 
 
 </resources>

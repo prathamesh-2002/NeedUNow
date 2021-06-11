@@ -285,7 +285,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/shape"
+                    android:background="@drawable/gradient1"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -330,7 +330,8 @@
                 android:orientation="vertical"
                 android:text="Other HelpLines"
                 android:textColor="@color/white"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="20dp"
+                />
         </LinearLayout>
 
     </LinearLayout>
