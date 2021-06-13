@@ -3,19 +3,30 @@
     <style name="Theme.SOS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/red</item>
-        <item name="colorPrimaryVariant">@color/red2</item>
+        <item name="colorPrimaryVariant">@color/lightBackground</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/darkToolNav</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/white</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="android:windowBackground">@color/darkBackground</item>
         <!-- Status bar color. -->
-       <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
+       <!--<item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
         <!-- Customize your theme here. -->
         <item name="actionBarStyle">
             @style/Theme.MyActionBar
         </item>
+    </style>
+    <style name="Theme1.SOS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryVariant">@color/red2</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/darkBackground</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
     </style>
 
     <style name="Theme.MyActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">

@@ -5,17 +5,32 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.app.Dialog;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private Toolbar sToolbar;
+    Dialog dialog;
+    RadioButton radioButton,radioButton1;
+    SharedPreferences sharedPreferences=null;
 
+    private Toolbar sToolbar;
+    RadioGroup r1;
+    CardView c1;
     CardView card1;
     CardView card2;
     CardView card3;
@@ -25,14 +40,25 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
+        
         sToolbar = findViewById(R.id.setting_toolbar);
         setSupportActionBar(sToolbar);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.outline_arrow_back_ios_new_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Settings");
+       
+        c1=(CardView)findViewById(R.id.theme);
 
+
+
+        dialog=new Dialog(this);
+        c1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode();
+            }
+        });
 
         card1 = (CardView) findViewById(R.id.scard1);
         card2 = (CardView) findViewById(R.id.scard2);
@@ -88,5 +114,53 @@ public class SettingsActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+      
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        c1 = (CardView)findViewById(R.id.c1);
+
+        c1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplication(), MainActivity.class));
+            }
+        });
+
+    }
+    public void onRadioButtonClicked(View v) {
+        // Is the button now checked?
+
+        boolean checked = ((RadioButton) v).isChecked();
+
+        // Check which radio button was clicked
+        switch(v.getId()) {
+            case R.id.day:
+                if (checked)
+                    Toast.makeText(this,"Day Mode",Toast.LENGTH_SHORT).show();
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+                break;
+            case R.id.night:
+                if (checked)
+                    Toast.makeText(this," Night Mode", Toast.LENGTH_SHORT).show();
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
+                break;
+            case R.id.sys:
+                if (checked)
+                    Toast.makeText(this," System Default", Toast.LENGTH_SHORT).show();
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+
+                break;
+        }
+    }
+
+    private void mode() {
+        dialog.setContentView(R.layout.mode);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+    }
+
+    public void back(View view) {
+        dialog.dismiss();
     }
 }
