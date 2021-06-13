@@ -50,8 +50,6 @@ public class SettingsActivity extends AppCompatActivity {
        
         c1=(CardView)findViewById(R.id.theme);
 
-
-
         dialog=new Dialog(this);
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,16 +112,6 @@ public class SettingsActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-      
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        c1 = (CardView)findViewById(R.id.c1);
-
-        c1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplication(), MainActivity.class));
-            }
-        });
 
     }
     public void onRadioButtonClicked(View v) {

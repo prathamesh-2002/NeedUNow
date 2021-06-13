@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">SOS</string>
-    <string name="title_home">NeedUNow</string>
+    <string name="title_home">SOS</string>
     <string name="title_dashboard">Tips</string>
     <string name="title_notifications">Helplines</string>
     <string name="title_settings">Settings</string>

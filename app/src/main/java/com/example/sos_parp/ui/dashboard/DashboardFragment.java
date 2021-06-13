@@ -51,7 +51,7 @@ public class DashboardFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), T_VehicleActivity.class);
                 getActivity().startActivity(intent);
-
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
 
         });
@@ -61,6 +61,7 @@ public class DashboardFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), T_WomenActivity.class);
                 getActivity().startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
 
         });
@@ -70,6 +71,7 @@ public class DashboardFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), T_FireActivity.class);
                 getActivity().startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
 
         });
@@ -79,6 +81,7 @@ public class DashboardFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), T_HarmActivity.class);
                 getActivity().startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
 
         });
@@ -88,6 +91,7 @@ public class DashboardFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), T_MedicalActivity.class);
                 getActivity().startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
 
         });
@@ -97,6 +101,7 @@ public class DashboardFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), T_EarthquakeActivity.class);
                 getActivity().startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
 
         });
@@ -106,6 +111,7 @@ public class DashboardFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), T_FloodActivity.class);
                 getActivity().startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
 
         });
@@ -115,6 +121,7 @@ public class DashboardFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), T_FirstAid.class);
                 getActivity().startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
 
         });
@@ -133,6 +140,8 @@ public class DashboardFragment extends Fragment {
             public void onChanged(@Nullable String s) {
             }
         });
+
+
         return root;
     }
 

@@ -27,4 +27,10 @@ public class T_FireActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_DIAL, call);
         startActivity(intent);
     }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }
