@@ -44,13 +44,12 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <RadioGroup
-                    android:id="@+id/rg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <RadioButton
                         android:id="@+id/sys"
-                        android:onClick="onRadioButtonClicked"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
@@ -59,7 +58,6 @@
 
                     <RadioButton
                         android:id="@+id/day"
-                        android:onClick="onRadioButtonClicked"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
@@ -68,7 +66,8 @@
 
                     <RadioButton
                         android:id="@+id/night"
-                        android:onClick="onRadioButtonClicked"
+
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"

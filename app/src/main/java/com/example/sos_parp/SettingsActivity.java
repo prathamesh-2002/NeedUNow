@@ -10,6 +10,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -23,20 +24,37 @@ import androidx.cardview.widget.CardView;
 public class SettingsActivity extends AppCompatActivity {
 CardView c1;
 Dialog dialog;
-RadioButton radioButton,radioButton1;
-SharedPreferences sharedPreferences=null;
 
     private Toolbar sToolbar;
-    RadioGroup r1;
+    RadioButton r1,r2,r3;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         c1=(CardView)findViewById(R.id.theme);
-
-
-
+        r1=findViewById(R.id.sys);
+        r2=findViewById(R.id.day);
+        r3=findViewById(R.id.night);
+        
+        r1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean sysChecked) {
+                save("sys",sysChecked);
+            }
+        });
+        r2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean dayChecked) {
+                save("day",dayChecked);
+            }
+        });
+        r3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean nightChecked) {
+                save("night",nightChecked);
+            }
+        });
         dialog=new Dialog(this);
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,5 +112,18 @@ SharedPreferences sharedPreferences=null;
 
     public void back(View view) {
         dialog.dismiss();
+    }
+    private void save(String key,Boolean value){
+        SharedPreferences sp=getSharedPreferences("sos",MODE_PRIVATE);
+        SharedPreferences.Editor editor= sp.edit();
+        editor.putBoolean(key,value);
+        editor.apply();
+    }
+    private void retrive(String key){
+        SharedPreferences sp=getSharedPreferences("sos",MODE_PRIVATE);
+        r1.setChecked(sp.getBoolean("sys", false));
+        r2.setChecked(sp.getBoolean("day", false));
+        r3.setChecked(sp.getBoolean("night", false));
+
     }
 }
