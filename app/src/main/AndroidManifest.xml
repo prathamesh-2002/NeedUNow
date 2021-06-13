@@ -12,6 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOS">
+
+        <activity android:name=".HelpCenter" />
+
+        <activity android:name=".EditContacts" />
+
+        <activity
+            android:name=".PersonalInfo"
+            android:parentActivityName=".SettingsActivity" />
+
         <activity android:name=".helplines"
             android:screenOrientation="portrait"/>
         <activity
