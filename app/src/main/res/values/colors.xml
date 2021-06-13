@@ -15,4 +15,5 @@
     <color name="darkToolNav">#1E1E1E</color>
     <color name="lightGrey">#CCC6C6</color>
     <color name="lightRed">#EF6565</color>
+    <color name="alert1">#333333</color>
 </resources>

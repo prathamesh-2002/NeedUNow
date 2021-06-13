@@ -28,4 +28,9 @@ public class T_VehicleActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }
