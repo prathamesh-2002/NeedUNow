@@ -28,9 +28,6 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity  {
 
-
-
-
     private Toolbar myToolbar;
 
     @Override
@@ -51,9 +48,6 @@ public class MainActivity extends AppCompatActivity  {
         NavigationUI.setupWithNavController(navView, navController);
 
     }
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

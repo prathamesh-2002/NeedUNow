@@ -5,7 +5,6 @@
         <item name="colorPrimary">@color/red</item>
         <item name="colorPrimaryVariant">@color/darkGrey</item>
         <item name="colorOnPrimary">@color/white</item>
-
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/white</item>
         <item name="colorSecondaryVariant">@color/red</item>
