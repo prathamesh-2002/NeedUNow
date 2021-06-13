@@ -27,11 +27,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="43dp"
-            android:layout_marginRight="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/bold"
             android:text="@string/Women_title2"
