@@ -37,9 +37,8 @@ public class SettingsActivity extends AppCompatActivity {
     CheckBox checkBox;
     public static SharedPref sharedpref,sharedPreferences;
     private Toolbar sToolbar;
+    CardView card1, card2, card3, card4, card5;
 
-    CardView c1;
-    CardView card1, card2, card3, card4;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,18 +51,59 @@ public class SettingsActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.outline_arrow_back_ios_new_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Settings");
-        c1=(CardView)findViewById(R.id.theme);
-        c1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mode(v);
-            }
-        });
+
 
         card1 = (CardView) findViewById(R.id.scard1);
         card2 = (CardView) findViewById(R.id.scard2);
         card3 = (CardView) findViewById(R.id.scard3);
         card4 = (CardView) findViewById(R.id.scard4);
+        card5 = (CardView) findViewById(R.id.theme);
+
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplication(), PersonalInfo.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+
+        });
+
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplication(), EditContacts.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+
+        });
+
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplication(), HelpCenter.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+
+        });
+
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                panic.setContentView(R.layout.panic);
+                panic.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                panic.show();
+            }
+        });
+
+        card5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode(v);
+            }
+        });
 
     }
 
