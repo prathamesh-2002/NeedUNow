@@ -1,5 +1,6 @@
 package com.example.sos_parp.ui.notifications;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ public class NotificationsFragment extends Fragment {
     private NotificationsViewModel notificationsViewModel;
     CardView card1,card2,card3,card4,card5,card6;
     Button button1,button2;
+    Dialog dialog;
     @Override
     public void onViewCreated(@NotNull View view, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
