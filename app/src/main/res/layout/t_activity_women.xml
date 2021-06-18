@@ -15,11 +15,11 @@
         android:paddingTop="10dp">
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/bold"
             android:text="@string/Women_title"
             android:textColor="?attr/colorPrimaryVariant"
@@ -27,12 +27,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="43dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
             android:fontFamily="@font/bold"
             android:text="@string/Women_title2"
             android:textColor="?attr/colorSecondaryVariant"
@@ -41,8 +40,10 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cardView2"
-            android:layout_width="375dp"
+            android:layout_width="wrap_content"
             android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_gravity="center"
             android:alpha="0.9"
             android:background="@drawable/gradient2">
@@ -124,29 +125,23 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:layout_width="363dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:fontFamily="@font/bold"
             android:text="@string/Tips_title3"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="43dp"
-            android:layout_marginRight="40dp"/>
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
-            android:layout_height="27dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
             android:fontFamily="@font/bold"
             android:text="@string/Women_1"
             android:textColor="@color/lightRed"
@@ -154,13 +149,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/semibold"
             android:text="@string/Women_1_body"
@@ -169,14 +161,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
-            android:layout_height="27dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
             android:fontFamily="@font/bold"
             android:text="@string/Women_2"
             android:textColor="@color/lightRed"
@@ -184,13 +173,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/semibold"
             android:text="@string/Women_2_body"
@@ -202,18 +188,17 @@
             android:id="@+id/imageView17"
             android:layout_width="360dp"
             android:layout_height="270dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/women_activity" />
 
         <TextView
-            android:layout_width="363dp"
-            android:layout_height="27dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
             android:fontFamily="@font/bold"
             android:text="@string/Women_3"
             android:textColor="@color/lightRed"
@@ -221,13 +206,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/semibold"
             android:text="@string/Women_3_body"
@@ -236,14 +218,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
-            android:layout_height="27dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
             android:fontFamily="@font/bold"
             android:text="@string/Women_4"
             android:textColor="@color/lightRed"
@@ -251,13 +230,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/semibold"
             android:text="@string/Women_4_body"
@@ -266,14 +242,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
-            android:layout_height="27dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
             android:fontFamily="@font/bold"
             android:text="@string/Women_5"
             android:textColor="@color/lightRed"
@@ -281,13 +254,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/semibold"
             android:text="@string/Women_5_body"
@@ -296,14 +266,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
             android:fontFamily="@font/bold"
             android:text="@string/Women_6"
             android:textColor="@color/lightRed"
@@ -311,14 +278,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="7dp"
             android:fontFamily="@font/semibold"
             android:text="@string/Women_6_1"
@@ -327,13 +291,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="7dp"
             android:fontFamily="@font/semibold"
             android:text="@string/Women_6_2"
@@ -342,13 +303,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="7dp"
             android:fontFamily="@font/semibold"
             android:text="@string/Women_6_3"
@@ -357,13 +315,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="7dp"
             android:fontFamily="@font/semibold"
             android:text="@string/Women_6_4"
@@ -372,13 +327,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="7dp"
             android:fontFamily="@font/semibold"
             android:text="@string/Women_6_5"
@@ -388,16 +340,16 @@
 
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
             android:id="@+id/youtube_player_view1"
-            android:layout_width="360dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="20dp"
             app:videoId="KVpxP3ZZtAc"
             app:autoPlay="false"
             app:showFullScreenButton="false" />
-
-
 
     </LinearLayout>
 </ScrollView>

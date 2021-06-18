@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SOS</string>
+    <string name="app_name">NeedUNow</string>
     <string name="title_home">SOS</string>
     <string name="title_dashboard">Tips</string>
     <string name="title_notifications">Helplines</string>
@@ -11,35 +11,46 @@
 
     <string name="textview">name</string>
     <string name="hospital">Hospital</string>
-    <string name="hospitalno">CALL 102</string>
-    <string name="hospital_heading">Hospital HelpLine</string>
-    <string name="case1">1. In case of accident</string>
-    <string name="case2">2. Breathing difficulties</string>
-    <string name="case3">3. Someone collapses</string>
-    <string name="case4">4. Anything that can cause something severe</string>
-    <string name="national_helpline_number">NATIONAL HELPLINE NUMBER</string>
+    <string name="hospitalno">CALL 102</string><string name="str1">
+    <ul>
+        <li><i>first</i> item</li>
+        <li>item 2</li>
+    </ul>
+</string>
+
+    <string name="hospital_heading">Medical HelpLine</string>
+    <string name="case1">- In case of any Medical Emergency</string>
+    <string name="case2">- Breathing Difficulties</string>
+    <string name="case3">- Immediate attention of medical professionals</string>
+    <string name="national_helpline_number">National Helpline Number</string>
     <string name="todo">TODO</string>
     <string name="police_helpline">Police HelpLine</string>
-    <string name="case5">1. If want to report any crime</string>
-    <string name="case6">2. Want a legal Help</string>
-    <string name="case7">3. In trouble situation</string>
+    <string name="case5">- Report any crime</string>
+    <string name="case6">- Need a Legal Help</string>
+    <string name="case7">- In any threatened situation</string>
     <string name="policeno">CALL 100</string>
-    <string name="case8">4. In any situation you might need police help</string>
-    <string name="case9">1. Child abuse caught</string>
+    <string name="case8">- Situation that might need immediate police attendance</string>
+    <string name="case9">- Report Child Abuse</string>
     <string name="child_helpline">Child HelpLine</string>
-    <string name="case10">2. Child labour caught</string>
-    <string name="case11">3. Child trafficking</string>
-    <string name="case12">4. In any situation you might need to </string>
-    <string name="case121">call child authority</string>
+    <string name="case10">- Report Child Labour</string>
+    <string name="case11">- Child trafficking</string>
+    <string name="case12">- In case of, unjust or forced behaviour of individuals towards children</string>
     <string name="childno">CALL 1098</string>
     <string name="setting">Setting</string>
     <string name="fire_helpline">Fire HelpLine</string>
-    <string name="case13">1. Caught massive fire in public palce</string>
-    <string name="case14">2. Spreading fire near flammable substances</string>
-    <string name="case15">3. Need help if caught in fire</string>
+    <string name="case13">- In case of, massive Fire outbreak</string>
+    <string name="case14">- Rescue people caught in fire</string>
+    <string name="case15">- Provide immediate medical help to victims</string>
     <string name="call_101">CALL 101</string>
     <string name="road_accident">Road Accident</string>
+    <string name="case16">- In case of a severe vehicle crash</string>
+    <string name="case17">- Provide immediate Medical help to people suffered from the crash </string>
+    <string name="case18">- Hit and Run</string>
     <string name="women_helpline">Women Helpline</string>
+    <string name="case19">- If you feel unsafe or threatened</string>
+    <string name="case20">- In case of, intentional harm or violence</string>
+    <string name="case21">- Held by someone who may be in possession of weapons</string>
+    <string name="case22">- Report molestation</string>
 
     <!-- Tips Content Screen -->
     <string name="Tips_title">Emergency Situations</string>

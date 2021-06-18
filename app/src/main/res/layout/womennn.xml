@@ -5,22 +5,20 @@
     android:layout_width="350dp"
     android:layout_height="450dp"
     android:layout_gravity="center"
-    android:background="@drawable/shape"
-    android:padding="5dp">
+    android:background="@drawable/gradient1"
+    android:padding="30dp">
 
     <ImageView
         android:id="@+id/imageView20"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:paddingBottom="25dp"
-        android:paddingRight="10dp"
-        android:src="@drawable/women"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@drawable/outline_female_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.13"
-        android:background="@drawable/circle1"
         app:tint="@color/white"
         android:contentDescription="@string/hospital" />
 
@@ -58,7 +56,7 @@
             android:background="@drawable/bbg"
             android:fontFamily="@font/semibold"
             android:text="CALL 1091"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             app:backgroundTint="@android:color/transparent"
             tools:layout_editor_absoluteX="129dp"
@@ -70,7 +68,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/semibold"
+        android:fontFamily="@font/bold"
         android:text="@string/women_helpline"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -79,21 +77,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/semibold"
-        android:text="1. Someone is staking you"
+        android:text="@string/case19"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="16sp"
 
         app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
         app:layout_constraintVertical_bias="0.2" />
@@ -103,13 +100,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/semibold"
-        android:text="2. Ganged up by some people"
+        android:text="@string/case20"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="16sp"
 
         app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
         app:layout_constraintVertical_bias="0.0" />
@@ -119,28 +116,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/semibold"
-        android:text="3. Threaten by someone using harmful weapon"
+        android:text="@string/case21"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.0" />
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/semibold"
-        android:text="4. To report molestation "
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.22"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
         app:layout_constraintVertical_bias="0.0" />
 
 

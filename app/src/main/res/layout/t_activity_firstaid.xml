@@ -14,11 +14,11 @@
         android:paddingTop="10dp">
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/bold"
             android:text="@string/FAid_title"
             android:textColor="?attr/colorPrimaryVariant"
@@ -26,12 +26,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="43dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
             android:fontFamily="@font/bold"
             android:text="@string/FAid_title2"
             android:textColor="?attr/colorSecondaryVariant"
@@ -40,8 +39,10 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cardView2"
-            android:layout_width="375dp"
+            android:layout_width="wrap_content"
             android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_gravity="center"
             android:alpha="0.9"
             android:background="@drawable/gradient2">
@@ -88,28 +89,23 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:layout_width="363dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:fontFamily="@font/bold"
             android:text="@string/FAid_Tips_title3"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="21sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="43dp"
-            android:layout_marginRight="40dp"/>
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item1"
@@ -118,13 +114,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item2"
@@ -133,13 +126,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item3"
@@ -148,13 +138,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item4"
@@ -163,13 +150,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item5"
@@ -178,13 +162,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item6"
@@ -193,13 +174,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item7"
@@ -209,13 +187,10 @@
 
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item8"
@@ -224,13 +199,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item9"
@@ -239,13 +211,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item10"
@@ -254,13 +223,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item11"
@@ -269,13 +235,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item12"
@@ -284,13 +247,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="363dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/semibold"
             android:text="@string/item13"
@@ -300,9 +260,11 @@
 
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
             android:id="@+id/youtube_player_view7"
-            android:layout_width="360dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="20dp"
             app:videoId="SKxQr49LV0Y"
