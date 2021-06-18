@@ -24,17 +24,14 @@ import androidx.cardview.widget.CardView;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    Dialog dialog;
+    Dialog dialog, panic;
     RadioButton radioButton,radioButton1;
     SharedPreferences sharedPreferences=null;
 
     private Toolbar sToolbar;
     RadioGroup r1;
     CardView c1;
-    CardView card1;
-    CardView card2;
-    CardView card3;
-
+    CardView card1, card2, card3, card4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +40,7 @@ public class SettingsActivity extends AppCompatActivity {
         
         sToolbar = findViewById(R.id.setting_toolbar);
         setSupportActionBar(sToolbar);
+        panic = new Dialog(this);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.outline_arrow_back_ios_new_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -61,6 +59,7 @@ public class SettingsActivity extends AppCompatActivity {
         card1 = (CardView) findViewById(R.id.scard1);
         card2 = (CardView) findViewById(R.id.scard2);
         card3 = (CardView) findViewById(R.id.scard3);
+        card4 = (CardView) findViewById(R.id.scard4);
 
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +89,15 @@ public class SettingsActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
 
+        });
+
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                panic.setContentView(R.layout.panic);
+                panic.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                panic.show();
+            }
         });
 
     }

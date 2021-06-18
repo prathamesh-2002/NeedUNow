@@ -130,6 +130,8 @@ public class TimerActivity extends AppCompatActivity {
         finish();
     }
 
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
