@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="60dp"
-    android:paddingTop="70dp"
+    android:theme="@style/Theme3.SOS"
+    android:paddingTop="60dp"
     android:clickable="true"
     tools:context=".ui.dashboard.DashboardFragment"
     android:focusable="true">
@@ -23,7 +24,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginLeft="27dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/bold"
             android:text="@string/Tips_title2"
             android:textColor="?attr/colorPrimaryVariant"
@@ -34,7 +35,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="27dp"
-            android:layout_marginRight="25dp"
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/bold"
             android:text="@string/Tips_title"
@@ -44,12 +44,13 @@
             android:textStyle="bold" />
 
 
-
         <androidx.cardview.widget.CardView
             android:id="@+id/t_c1"
             android:layout_width="363dp"
             android:layout_height="85dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="25dp"
             app:cardElevation="8dp"
             app:cardCornerRadius="20dp"
@@ -63,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="1.0"
-                android:background="@drawable/gradient1">
+                android:background="?attr/colorSecondary">
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -76,7 +77,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.521"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -87,7 +88,7 @@
                     android:fontFamily="@font/semibold"
                     android:gravity="center_vertical"
                     android:text="Vehicle Accident"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -109,7 +110,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.5"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -120,6 +121,8 @@
             android:layout_width="363dp"
             android:layout_height="85dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="25dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
@@ -133,20 +136,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="1.0"
-                android:background="@drawable/gradient1">
+                android:background="?attr/colorSecondary">
 
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_marginStart="18dp"
-                    android:layout_marginLeft="18dp"
-                    android:src="@drawable/outline_female_white_24dp"
+                    android:src="@drawable/outline_female_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.521"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -155,7 +156,7 @@
                     android:fontFamily="@font/semibold"
                     android:gravity="center_vertical"
                     android:text="Women Safety"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -175,7 +176,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.5"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -186,6 +187,8 @@
             android:layout_width="363dp"
             android:layout_height="85dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="25dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
@@ -199,20 +202,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="1.0"
-                android:background="@drawable/gradient1">
+                android:background="?attr/colorSecondary">
 
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_marginStart="18dp"
-                    android:layout_marginLeft="18dp"
                     android:src="@drawable/outline_local_fire_department_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.521"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -225,7 +226,7 @@
                     android:fontFamily="@font/semibold"
                     android:gravity="center_vertical"
                     android:text="Fire Emergency"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -245,7 +246,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.5"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -256,6 +257,8 @@
             android:layout_width="363dp"
             android:layout_height="85dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="25dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
@@ -269,7 +272,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="1.0"
-                android:background="@drawable/gradient1">
+                android:background="?attr/colorSecondary">
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -277,12 +280,12 @@
                     android:layout_height="28dp"
                     android:layout_marginStart="18dp"
                     android:layout_marginLeft="18dp"
-                    android:src="@drawable/outline_harm"
+                    android:src="@drawable/outline_sports_kabaddi_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.521"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -295,7 +298,7 @@
                     android:fontFamily="@font/semibold"
                     android:gravity="center_vertical"
                     android:text="Intentional Harm"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -316,7 +319,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.5"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -327,6 +330,8 @@
             android:layout_width="363dp"
             android:layout_height="85dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="25dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
@@ -340,20 +345,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="1.0"
-                android:background="@drawable/gradient1">
+                android:background="?attr/colorSecondary">
 
                 <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_marginStart="18dp"
-                    android:layout_marginLeft="18dp"
                     android:src="@drawable/outline_local_hospital_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.521"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -364,7 +367,7 @@
                     android:fontFamily="@font/semibold"
                     android:gravity="center_vertical"
                     android:text="Medical Emergency"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -385,7 +388,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.5"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -398,6 +401,8 @@
             android:layout_width="363dp"
             android:layout_height="85dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="25dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="8dp"
@@ -411,7 +416,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="1.0"
-                android:background="@drawable/gradient1">
+                android:background="?attr/colorSecondary">
 
                 <ImageView
                     android:id="@+id/imageView7"
@@ -419,12 +424,12 @@
                     android:layout_height="28dp"
                     android:layout_marginStart="18dp"
                     android:layout_marginLeft="18dp"
-                    android:src="@drawable/outline_earthquake"
+                    android:src="@drawable/outline_sensors_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.521"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -435,7 +440,7 @@
                     android:fontFamily="@font/semibold"
                     android:gravity="center_vertical"
                     android:text="Earthquake"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -456,7 +461,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.5"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -467,6 +472,8 @@
             android:layout_width="363dp"
             android:layout_height="85dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="25dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="8dp"
@@ -480,20 +487,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="1.0"
-                android:background="@drawable/gradient1">
+                android:background="?attr/colorSecondary">
 
                 <ImageView
                     android:id="@+id/imageView8"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_marginStart="18dp"
-                    android:layout_marginLeft="18dp"
-                    android:src="@drawable/outline_flood"
+                    android:src="@drawable/outline_pool_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.521"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -506,7 +511,7 @@
                     android:fontFamily="@font/semibold"
                     android:gravity="center_vertical"
                     android:text="Floods"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -526,7 +531,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.492"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -537,6 +542,8 @@
             android:layout_width="363dp"
             android:layout_height="85dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="25dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="8dp"
@@ -550,7 +557,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="1.0"
-                android:background="@drawable/gradient1">
+                android:background="?attr/colorSecondary">
 
                 <ImageView
                     android:id="@+id/imageView9"
@@ -563,7 +570,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.521"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
                 <TextView
                     android:id="@+id/textView9"
@@ -574,7 +581,7 @@
                     android:fontFamily="@font/semibold"
                     android:gravity="center_vertical"
                     android:text="First Aid"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -594,7 +601,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.5"
-                    app:tint="@color/white" />
+                    app:tint="?attr/colorOnSecondary" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

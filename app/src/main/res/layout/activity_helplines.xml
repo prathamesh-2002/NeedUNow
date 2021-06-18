@@ -75,7 +75,7 @@
                 android:layout_height="95dp"
                 android:layout_gravity="center"
                 app:layout_column="1"
-                app:layout_columnWeight="1"
+                android:paddingRight="10dp"
                 app:layout_row="0"
                 app:layout_rowWeight="1">
 
