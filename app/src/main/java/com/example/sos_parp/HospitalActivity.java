@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -41,6 +43,7 @@ public class HospitalActivity extends AppCompatActivity {
 
 
         });
+        getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 
 

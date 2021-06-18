@@ -18,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
@@ -26,15 +27,40 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import static com.example.sos_parp.SettingsActivity.myswitch;
+import static com.example.sos_parp.SettingsActivity.sharedPreferences;
+import static com.example.sos_parp.SettingsActivity.sharedpref;
+
 public class MainActivity extends AppCompatActivity  {
 
     private Toolbar myToolbar;
+
+    SettingsActivity settingsActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
+        sharedpref = new SharedPref(this);
+        sharedPreferences=new SharedPref(this);
+
+        if(sharedPreferences.loadDefaultmode()==true)
+        {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+
+        }else {
+            if (sharedpref.loadNightModeState() == true) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            }
+        }
+
+
+      
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
         myToolbar = findViewById(R.id.toolbar);

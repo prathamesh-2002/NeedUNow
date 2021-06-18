@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sos_parp">
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -12,39 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOS">
-
-        <activity android:name=".HelpCenter" />
-
-        <activity android:name=".EditContacts" />
-
-        <activity
-            android:name=".PersonalInfo"
-            android:parentActivityName=".SettingsActivity" />
-
-        <activity android:name=".helplines"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".WomennnActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".CarrrrActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".FireeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ChildActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".PoliceActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".HospitalActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
+        <activity android:name=".Intro"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN"
@@ -53,61 +23,84 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HelpCenter" />
+        <activity android:name=".EditContacts" />
+        <activity
+            android:name=".PersonalInfo"
+            android:parentActivityName=".SettingsActivity" />
+        <activity
+            android:name=".helplines"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WomennnActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".CarrrrActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".FireeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".ChildActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".PoliceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".HospitalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_settings"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".HelpActivity"
             android:label="@string/title_help"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".T_VehicleActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".T_WomenActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".T_FireActivity"
             android:parentActivityName=".MainActivity" />
-
-
         <activity
             android:name=".T_HarmActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".T_MedicalActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".T_EarthquakeActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".T_FloodActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".T_FirstAid"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".TimerActivity"
-            android:theme="@style/Theme1.SOS"
-            android:parentActivityName=".MainActivity" />
-
-        <activity android:name=".AlertActivity"
-            android:theme="@style/Theme1.SOS"
-            android:parentActivityName=".MainActivity">
-
-        </activity>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme1.SOS" />
+        <activity
+            android:name=".AlertActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme1.SOS" />
     </application>
 
 </manifest>
