@@ -12,6 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOS">
+
+        <activity android:name=".HelpCenter" />
+
+        <activity android:name=".EditContacts" />
+
+        <activity
+            android:name=".PersonalInfo"
+            android:parentActivityName=".SettingsActivity" />
+
         <activity android:name=".helplines"
             android:screenOrientation="portrait"/>
         <activity
@@ -58,55 +67,47 @@
 
         <activity
             android:name=".T_VehicleActivity"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".T_WomenActivity"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".T_FireActivity"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:parentActivityName=".MainActivity" />
 
 
         <activity
             android:name=".T_HarmActivity"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".T_MedicalActivity"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".T_EarthquakeActivity"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".T_FloodActivity"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".T_FirstAid"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".TimerActivity"
             android:theme="@style/Theme1.SOS"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:parentActivityName=".MainActivity" />
+
         <activity android:name=".AlertActivity"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:theme="@style/Theme1.SOS"
+            android:parentActivityName=".MainActivity">
 
-
+        </activity>
     </application>
 
 </manifest>

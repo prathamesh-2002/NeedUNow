@@ -75,7 +75,7 @@
         android:fontFamily="@font/semibold"
         android:text="KEEP CALM!"
         android:textAllCaps="true"
-        android:textColor="@color/red"
+        android:textColor="?attr/colorPrimary"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
