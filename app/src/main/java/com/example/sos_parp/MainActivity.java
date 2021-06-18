@@ -1,16 +1,24 @@
 package com.example.sos_parp;
 
+import android.Manifest;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.sos_parp.ui.notifications.NotificationsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,6 +28,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -29,6 +39,7 @@ import androidx.navigation.ui.NavigationUI;
 public class MainActivity extends AppCompatActivity  {
 
     private Toolbar myToolbar;
+    private static final int MY_PERMISSIONS_REQUEST_CODE = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +58,62 @@ public class MainActivity extends AppCompatActivity  {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
 
+        checkPermission();
+    }
+
+    protected void checkPermission(){
+        if(ContextCompat.checkSelfPermission(MainActivity.this,Manifest.permission.CALL_PHONE)
+                + ContextCompat.checkSelfPermission(MainActivity.this,Manifest.permission.READ_CONTACTS)
+                + ContextCompat.checkSelfPermission(MainActivity.this,Manifest.permission.SEND_SMS)
+                == PackageManager.PERMISSION_GRANTED){
+
+            }else{
+                // Directly request for required permissions, without explanation
+                ActivityCompat.requestPermissions(MainActivity.this,
+                        new String[]{
+                                Manifest.permission.CALL_PHONE,
+                                Manifest.permission.READ_CONTACTS,
+                                Manifest.permission.SEND_SMS
+                        },
+                        MY_PERMISSIONS_REQUEST_CODE
+                );
+            }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults){
+        switch (requestCode){
+            case MY_PERMISSIONS_REQUEST_CODE:{
+                if(
+                        (grantResults.length >0) &&
+                                (grantResults[0]
+                                        + grantResults[1]
+                                        + grantResults[2]
+                                        == PackageManager.PERMISSION_GRANTED
+                                )
+                ){
+                }else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setCancelable(false);
+                    builder.setMessage("Accept permissions in the Settings Menu");
+                    builder.setTitle("Permissions required");
+                    builder.setPositiveButton("Go To Settings", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent intent = new Intent();
+                            intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                            Uri uri = Uri.fromParts("package", MainActivity.this.getPackageName(), null);
+                            intent.setData(uri);
+                            MainActivity.this.startActivity(intent);
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+
+                }
+            }
+        }
     }
 
     @Override
@@ -74,7 +141,6 @@ public class MainActivity extends AppCompatActivity  {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 }
 

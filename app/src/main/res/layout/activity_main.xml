@@ -31,19 +31,33 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:menu="@menu/toolbar_nav_menu" />
 
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:elevation="10dp"
+                android:src="@drawable/logo"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView3"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/title_home"
-                android:textColor="?attr/colorPrimary"
-                android:textSize="30dp"
-                android:fontFamily="@font/semibold"
                 android:elevation="10dp"
+                android:fontFamily="@font/semibold"
+                android:text="@string/app_name"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/toolbar"
                 app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintHorizontal_bias="0.534"
                 app:layout_constraintStart_toStartOf="@+id/toolbar"
-                app:layout_constraintTop_toTopOf="@+id/toolbar" />
+                app:layout_constraintTop_toTopOf="@+id/toolbar"
+                app:layout_constraintVertical_bias="0.421" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -65,8 +79,8 @@
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="405dp"
+        android:layout_height="725dp"
         app:defaultNavHost="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
