@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/Theme3.SOS"
     android:orientation="vertical"
     android:paddingTop="70dp"
     android:clickable="true"
@@ -21,13 +22,14 @@
 
         <TextView
             android:id="@+id/helpline"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:fontFamily="@font/bold"
             android:text="@string/national_helpline_number"
             android:textSize="25sp"
-            android:textColor="?attr/colorOnSecondary"
+            android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold">
 
         </TextView>
@@ -37,17 +39,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/semibold"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:text="CALL 112"
             app:cornerRadius="20dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:backgroundTint="@color/lightRed"
-            >
+            android:backgroundTint="@color/lightRed"/>
 
-        </Button>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,43 +71,42 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/c1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="8dp"
+                app:cardElevation="6dp"
                 app:layout_column="0"
                 app:layout_columnWeight="1"
                 app:layout_gravity="fill"
                 app:layout_row="0"
-                app:layout_rowWeight="1"
-                >
+                app:layout_rowWeight="1">
 
                 <LinearLayout
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/gradient1"
+                    android:background="?attr/colorSecondary"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
                         android:src="@drawable/outline_local_hospital_24"
-                        app:tint="@color/white" />
+                        app:tint="?attr/colorOnSecondary" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
-                        android:text="Hospital"
+                        android:text="Ambulance"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"/>
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -114,11 +114,11 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/c2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="8dp"
+                app:cardElevation="6dp"
                 app:layout_column="1"
                 app:layout_columnWeight="1"
                 app:layout_gravity="fill"
@@ -129,36 +129,36 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/gradient1"
+                    android:background="?attr/colorSecondary"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/outline_local_police_black_24"
-                        app:tint="@color/white" />
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
+                        android:src="@drawable/outline_local_police_24"
+                        app:tint="?attr/colorOnSecondary" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
                         android:text="Police"
-                        android:layout_marginTop="10dp"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
+                        android:textColor="?attr/colorOnSecondary"
                         android:textSize="20sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/c3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="8dp"
+                app:cardElevation="6dp"
                 app:layout_column="0"
                 app:layout_columnWeight="1"
                 app:layout_gravity="fill"
@@ -169,37 +169,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/gradient1"
+                    android:background="?attr/colorSecondary"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
                         android:padding="5dp"
-                        android:src="@drawable/child3"
-                        app:tint="@color/white"/>
+                        android:src="@drawable/outline_escalator_warning_24"
+                        app:tint="?attr/colorOnSecondary" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
                         android:text="Child"
-                        android:layout_marginTop="10dp"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"/>
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="20sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/c4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="8dp"
+                app:cardElevation="6dp"
                 app:layout_column="1"
                 app:layout_columnWeight="1"
                 app:layout_gravity="fill"
@@ -210,37 +210,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/gradient1"
+                    android:background="?attr/colorSecondary"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
                         android:padding="7dp"
                         android:src="@drawable/outline_local_fire_department_24"
-                        app:tint="@color/white" />
+                        app:tint="?attr/colorOnSecondary" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
                         android:text="Fire"
                         android:textAlignment="center"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="?attr/colorOnSecondary"
                         android:textSize="20sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/c5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="8dp"
+                app:cardElevation="6dp"
                 app:layout_column="0"
                 app:layout_columnWeight="1"
                 app:layout_gravity="fill"
@@ -251,36 +251,36 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/gradient1"
+                    android:background="?attr/colorSecondary"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
                         android:src="@drawable/outline_commute_24"
-                        app:tint="@color/white"/>
+                        app:tint="?attr/colorOnSecondary" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
-                        android:text="Car"
+                        android:text="Accident"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"/>
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="20sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/c6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="8dp"
+                app:cardElevation="6dp"
                 app:layout_column="1"
                 app:layout_columnWeight="1"
                 app:layout_gravity="fill"
@@ -291,16 +291,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:background="@drawable/gradient1"
+                    android:background="?attr/colorSecondary"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:padding="5dp"
-                        android:src="@drawable/outline_female_white_24dp"
-                        app:tint="@color/white"/>
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/outline_female_24"
+                        app:tint="?attr/colorOnSecondary" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -308,10 +307,10 @@
                         android:fontFamily="@font/semibold"
                         android:gravity="center_horizontal"
                         android:text="Women"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"/>
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -334,11 +333,16 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="60dp"
                 android:gravity="center"
+                android:elevation="8dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:orientation="vertical"
                 android:text="Other HelpLines"
-                android:textColor="@color/white"
-                app:cornerRadius="20dp"
-                />
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="?attr/colorSecondary"
+                android:textColor="?attr/colorOnSecondary"
+                app:cornerRadius="20dp" />
         </LinearLayout>
 
     </LinearLayout>
