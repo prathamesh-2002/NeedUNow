@@ -15,14 +15,20 @@
        <!--<item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
         <!-- Customize your theme here. -->
         <item name="actionBarStyle">
-            @style/Theme.MyActionBar
+            @style/myToolbar.SOS
         </item>
     </style>
 
-    <style name="Theme.MyActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:textColor">
-            @color/white
-        </item>
+    <style name="myToolbar.SOS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="fontFamily">@font/semibold</item>
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryVariant">@color/lightBackground</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/darkToolNav</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorAccent">@color/red</item>
     </style>
 
     <style name="Theme1.SOS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -33,9 +39,10 @@
         <item name="colorSecondary">@color/darkBackground</item>
         <item name="colorSecondaryVariant">@color/alert1</item>
         <item name="colorOnSecondary">@color/white</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
+        <item name="colorAccent">@color/red</item>
+        <item name="android:windowBackground">@color/darkBackground</item>
     </style>
+
     <style name="Theme.AppCompat.Transparent.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowBackground">@color/material_on_surface_disabled</item>
@@ -59,7 +66,7 @@
         <!--<item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
         <!-- Customize your theme here. -->
         <item name="actionBarStyle">
-            @style/Theme.MyActionBar
+            @style/myToolbar.SOS
         </item>
     </style>
 

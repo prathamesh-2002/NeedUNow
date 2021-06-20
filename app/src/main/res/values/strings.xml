@@ -7,7 +7,7 @@
     <string name="title_help">Help</string>
     <string name="quote_home">\&quot;Asking for help is the bravest move you can make.\&quot;</string>
     <string name="tip_home">After pressing the button, an alert will be
-      sent to your friends in 10 seconds</string>
+      sent to your friends in 15 seconds</string>
 
     <string name="textview">name</string>
     <string name="hospital">Hospital</string>
@@ -224,10 +224,10 @@
 
     <!--activity_timer-->
     <string name="timer_name">\User\'s name,</string>
-    <string name="timer_name1">you\'re about to send emergency alerts</string>
+    <string name="timer_name1">You\'re about to send emergency alerts</string>
 
     <!--Alert Message-->
-    <string name="alert_msg">"I need help! \n\n Please reach ASAP to the location below:\nLink"</string>
+    <string name="alert_msg">\n\n Please reach ASAP to the location below:\n"</string>
 
 
 </resources>

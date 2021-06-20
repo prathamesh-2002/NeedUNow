@@ -32,7 +32,7 @@
         android:elevation="10dp"
         android:fontFamily="@font/regular"
         android:letterSpacing="0"
-        android:text="Hold for 3 seconds"
+        android:text="Hold to activate"
         android:textColor="@color/white"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toBottomOf="@+id/button"

@@ -1,6 +1,8 @@
 package com.example.sos_parp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,8 +13,10 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
@@ -20,6 +24,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
@@ -38,16 +43,35 @@ public class SettingsActivity extends AppCompatActivity {
     public static SharedPref sharedpref,sharedPreferences;
     private Toolbar sToolbar;
     CardView card1, card2, card3, card4, card5;
+    AlertDialog.Builder alt_bld;
+    EditText message;
+    Button set;
+    DBhandler dBhandler;
+    Cursor res;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
         dialog=new Dialog(this);
         sToolbar = findViewById(R.id.setting_toolbar);
         setSupportActionBar(sToolbar);
+        dBhandler = new DBhandler(this);
+        res = dBhandler.getDetails();
+        res.moveToFirst();
+
+        alt_bld = new AlertDialog.Builder(this, R.style.Theme_AlertDialog_SOS);
+
+        alt_bld.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
 
         panic = new Dialog(this);
+
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.outline_arrow_back_ios_new_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Settings");
@@ -86,15 +110,12 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplication(), HelpCenter.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
-
         });
 
         card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                panic.setContentView(R.layout.panic);
-                panic.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                panic.show();
+                panic(v);
             }
         });
 
@@ -137,8 +158,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             }
         });
-
-
 
         if(sharedPreferences.loadDefaultmode()==true){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
@@ -186,17 +205,35 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             }
         });
-
-        card4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                panic.setContentView(R.layout.panic);
-                panic.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                panic.show();
-            }
-        });
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
+    }
+
+    private void panic(View v) {
+        panic.setContentView(R.layout.panic);
+        panic.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        message = (EditText) panic.findViewById(R.id.MessageEditText);
+        set = (Button) panic.findViewById(R.id.MessageSet);
+        res = dBhandler.getDetails();
+        res.moveToFirst();
+        message.setText(res.getString(4));
+        set.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Boolean check = dBhandler.updatePanicMessage("0", message.getText().toString());
+                alt_bld.setTitle("");
+                if (check == true) {
+                    alt_bld.setMessage("Your panic message was updated");
+                }
+                else {
+                    alt_bld.setMessage("Could not update message due to unexpected error.");
+                }
+                AlertDialog alert = alt_bld.create();
+                alert.show();
+            }
+        });
+        panic.show();
     }
 
     public void back(View view) {
@@ -212,6 +249,10 @@ public class SettingsActivity extends AppCompatActivity {
             }
         }
         dialog.cancel();
+    }
+
+    public void dialogClose(View view) {
+        panic.dismiss();
     }
 
 

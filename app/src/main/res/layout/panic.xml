@@ -2,39 +2,54 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
-    android:layout_height="350dp"
+    android:layout_height="400dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     android:background="@drawable/dialog_corner">
 
     <ImageView
         android:id="@+id/back"
-        tools:ignore="VectorDrawableCompat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="back"
+        android:onClick="dialogClose"
         android:rotation="180"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/MessageEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049"
+        app:layout_constraintVertical_bias="0.40"
         app:srcCompat="@drawable/outline_chevron_right_24"
-        app:tint="?attr/colorOnSecondary" />
+        app:tint="?attr/colorOnSecondary"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Panic Message"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/MessageEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.40" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/MessageEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_dialog"
         android:ems="12"
+        android:textSize="18dp"
+        android:fontFamily="@font/regular"
         android:gravity="top"
+        android:hint="Your panic message here..."
         android:inputType="textMultiLine"
         android:lines="7"
         android:padding="18dp"
-        android:fontFamily="@font/regular"
-        android:hint="Your panic message here..."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -43,16 +58,17 @@
         app:layout_constraintVertical_bias="0.38" />
 
     <Button
-        android:layout_width="120dp"
+        android:id="@+id/MessageSet"
+        android:layout_width="118dp"
         android:layout_height="60dp"
-        android:textColor="@color/red"
+        android:backgroundTint="@color/red"
         android:text="Set"
+        android:textColor="?attr/colorSecondary"
         app:cornerRadius="50dp"
-        android:backgroundTint="?attr/colorSecondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/MessageEditText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

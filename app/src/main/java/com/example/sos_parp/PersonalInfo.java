@@ -64,18 +64,22 @@ public class PersonalInfo extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                check = dBhandler.updateDetails("0", name.getText().toString(), phone.getText().toString(), bloodGroup.getText().toString());
-                if (check == true) {
+                if (name.getText().toString().isEmpty()) {
                     alt_bld2.setTitle("");
-                    alt_bld2.setMessage("Your details were updated");
+                    alt_bld2.setMessage("Name field cannot be empty");
                 }
                 else {
-                    alt_bld2.setTitle("");
-                    alt_bld2.setMessage("Failed");
+                    check = dBhandler.updateDetails("0", name.getText().toString(), phone.getText().toString(), bloodGroup.getText().toString());
+                    if (check == true) {
+                        alt_bld2.setTitle("");
+                        alt_bld2.setMessage("Your details were updated");
+                    } else {
+                        alt_bld2.setTitle("");
+                        alt_bld2.setMessage("Failed");
+                    }
                 }
                 AlertDialog alert = alt_bld2.create();
                 alert.show();
-
             }
         });
     }

@@ -1,6 +1,7 @@
 package com.example.sos_parp;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.telephony.SmsManager;
@@ -17,12 +18,16 @@ import androidx.fragment.app.FragmentManager;
 import com.example.sos_parp.ui.home.HomeViewModel;
 import com.example.sos_parp.ui.notifications.NotificationsFragment;
 
-public class AlertActivity extends AppCompatActivity {
+public class
+AlertActivity extends AppCompatActivity {
 
     Button Safe, Call, Exit;
     TextView notify;
     SmsManager smsManager;
     private Vibrator myVib;
+    DBhandler dBhandler;
+    Cursor cRes;
+    String[] contactList;
 
     private static final int MSG_SEND_ATTEMPTS = 0;
     private int getMsgSendAttempts = MSG_SEND_ATTEMPTS;
@@ -37,6 +42,15 @@ public class AlertActivity extends AppCompatActivity {
         notify = (TextView)findViewById(R.id.notify);
         smsManager = SmsManager.getDefault();
         myVib = (Vibrator) this.getSystemService(VIBRATOR_SERVICE);
+        dBhandler = new DBhandler(this);
+        cRes = dBhandler.getContacts();
+        contactList = new String[cRes.getCount()];
+        cRes.moveToFirst();
+        int i = 0;
+        while (cRes.moveToNext()) {
+            contactList[i] = cRes.getString(1);
+            i++;
+        }
 
         Safe.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -50,7 +64,7 @@ public class AlertActivity extends AppCompatActivity {
         Call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), HomeViewModel.class);
+                Intent intent = new Intent(getApplication(), helplines.class);
                 startActivity(intent);
             }
         });
@@ -67,7 +81,9 @@ public class AlertActivity extends AppCompatActivity {
 
         if(getMsgSendAttempts < 3) {
             try {
-                smsManager.sendTextMessage("9867147799", null, "I'm Safe", null, null);
+                for (int i = 0; i<contactList.length-1; i++) {
+                    smsManager.sendTextMessage(contactList[i], null, "I'm Safe", null, null);
+                }
                 Toast.makeText(getApplicationContext(), "Alert sent!", Toast.LENGTH_LONG).show();
                 Safe.setText("Sent!");
                 notify.setVisibility(View.INVISIBLE);
