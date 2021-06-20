@@ -3,27 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    style="@style/Theme3.SOS">
 
 
     <ImageView
         android:id="@+id/slideimg"
-        android:layout_marginLeft="75dp"
         android:layout_width="207dp"
-        android:layout_marginTop="50dp"
-        android:layout_height="185dp" />
+        android:layout_height="185dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="103dp"
+        app:tint="@color/lightRed" />
 
     <TextView
         android:id="@+id/slidehead"
-        android:layout_marginTop="300dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_below="@+id/slideimg"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="0dp"
+        android:fontFamily="@font/semibold"
+        android:gravity="center"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="21sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/slide"
-        android:layout_marginTop="400dp"
-        android:layout_width="113dp"
-        android:layout_height="54dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slidehead"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="147dp"
+        android:fontFamily="@font/regular"
+        android:textSize="18sp"
         android:text="TextView" />
 </RelativeLayout>

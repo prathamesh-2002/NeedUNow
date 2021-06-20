@@ -6,7 +6,145 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="10dp"
-    android:paddingTop="10dp" >
+    android:paddingTop="10dp"
+    tools:context=".HelpActivity">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/lines1"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/lines2"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/lines3"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/lines4"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/lines5"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/lines6"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/lines7"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/lines8"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/permissions"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/semibold"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="Permissions"
+            android:layout_gravity="right"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/lightRed"/>
+
+        <Button
+            android:id="@+id/okay"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/semibold"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="Ok, Got it!"
+            android:onClick="goToHomePage"
+            android:layout_gravity="right"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/lightRed"/>
+
+
+    </LinearLayout>
 </ScrollView>

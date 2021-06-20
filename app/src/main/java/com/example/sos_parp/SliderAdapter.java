@@ -60,7 +60,7 @@ public class SliderAdapter extends PagerAdapter {
         slidehead.setText(slide_heading[position]);
         slidedis.setText(slide_des[position]);
         container.addView(view);
-    return view;
+        return view;
     }
 
     @Override

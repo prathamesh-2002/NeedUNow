@@ -1,6 +1,7 @@
 package com.example.sos_parp;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,5 +22,8 @@ public class T_FirstAid extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+    public void closeActivity(View view){
+        onBackPressed();
     }
 }

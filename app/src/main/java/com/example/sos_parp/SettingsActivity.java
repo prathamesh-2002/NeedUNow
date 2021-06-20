@@ -38,7 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
     public static SharedPref sharedpref,sharedPreferences;
     private Toolbar sToolbar;
 
-    CardView c1;
+    CardView c1,c7;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +56,17 @@ public class SettingsActivity extends AppCompatActivity {
                 mode(v);
             }
         });
+
+        c7=(CardView)findViewById(R.id.aboutus);
+        c7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), AboutUs.class));
+            }
+        });
+
+
+
 
     }
 
