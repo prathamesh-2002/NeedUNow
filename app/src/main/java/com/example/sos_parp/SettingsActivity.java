@@ -11,8 +11,11 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
@@ -32,31 +35,103 @@ import com.example.sos_parp.PersonalInfo;
 import com.example.sos_parp.R;
 
 public class SettingsActivity extends AppCompatActivity {
-    Dialog dialog;
+    Dialog dialog,dialog1;
+    EditText editText;
+    Button button;
     static Switch myswitch;
     CheckBox checkBox;
     public static SharedPref sharedpref,sharedPreferences;
     private Toolbar sToolbar;
 
-    CardView c1;
+    CardView card1,card2,card3,card4,card5,card6;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         dialog=new Dialog(this);
+        dialog1=new Dialog(this);
         sToolbar = findViewById(R.id.setting_toolbar);
         setSupportActionBar(sToolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.outline_arrow_back_ios_new_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Settings");
-        c1=(CardView)findViewById(R.id.theme);
-        c1.setOnClickListener(new View.OnClickListener() {
+        card1 = (CardView) findViewById(R.id.scard1);
+        card2 = (CardView) findViewById(R.id.scard2);
+        card3 = (CardView) findViewById(R.id.scard3);
+        card4 = (CardView) findViewById(R.id.scard4);
+        card5 = (CardView) findViewById(R.id.theme);
+        card6 = (CardView) findViewById(R.id.sfeedback);
+
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplication(), PersonalInfo.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+
+        });
+
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplication(), EditContacts.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+
+        });
+
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplication(), HelpCenter.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mode(v);
             }
         });
+        card6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                feed(v);
+            }
+        });
+    }
 
+    private void feed(View v) {
+        dialog1.setContentView(R.layout.feedback);
+
+        editText=(EditText)dialog1.findViewById(R.id.feedback);
+        button=(Button)dialog1.findViewById(R.id.send);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String msg=editText.getText().toString();
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.putExtra(Intent.EXTRA_EMAIL,new String[]{"prathmeshmane334@gmail.com"});
+                email.putExtra(Intent.EXTRA_SUBJECT, "Feedback on app");
+                email.putExtra(Intent.EXTRA_TEXT, msg);
+                email.setType("message/rfc822");
+                email.setPackage("com.google.android.gm");
+                startActivity(email);
+            }
+        });
+        dialog1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog1.show();
     }
 
     private void mode(View view) {
@@ -172,5 +247,10 @@ public class SettingsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
 
     }
+
+    public void fback(View view) {
+        dialog1.dismiss();
+    }
+
 
 }
