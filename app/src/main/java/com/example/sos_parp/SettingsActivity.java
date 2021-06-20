@@ -43,7 +43,7 @@ public class SettingsActivity extends AppCompatActivity {
     public static SharedPref sharedpref,sharedPreferences;
     private Toolbar sToolbar;
 
-    CardView card1,card2,card3,card4,card5,card6;
+    CardView card1,card2,card3,card4,card5,card6, card7;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +61,7 @@ public class SettingsActivity extends AppCompatActivity {
         card4 = (CardView) findViewById(R.id.scard4);
         card5 = (CardView) findViewById(R.id.theme);
         card6 = (CardView) findViewById(R.id.sfeedback);
+        card7 = (CardView) findViewById(R.id.aboutus);
 
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +87,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getApplication(), HelpCenter.class));
+                startActivity(new Intent(getApplication(), HelpActivity.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
@@ -108,6 +109,13 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 feed(v);
+            }
+        });
+
+        card7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),AboutUs.class));
             }
         });
     }
