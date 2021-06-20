@@ -21,22 +21,23 @@ public class SliderAdapter extends PagerAdapter {
         this.context=context;
     }
     public int[] slide_image={
-            R.drawable.child,
-            R.drawable.child,
-            R.drawable.child
+            R.drawable.logo1,
+            R.drawable.groupon,
+            R.drawable.disconnect,
+            R.drawable.tipsonbg
     };
     public String[] slide_heading={
-            "Head",
-            "Head",
-            "Head"
+            "NeedUNow",
+            "Alert your Companions",
+            "Works Offline",
+            "Life Saving Tips"
 
     };
     public String[] slide_des={
-            "Head",
-            "Head",
-            "Head"
-
-
+            "NeedUNow is your one tap life saver. Feel secure about your friends/family with NeedUNow",
+            "Tackle any sticky situation just on the press of one button and send an alert message to your friends/family.",
+            "NeedUNow uses the traditional messaging method and so works even offline. The Panic Message along with you current location will be sent to your Emergency Contacts.",
+            "Find a guide for all Emergency Situation to better understand 'What to do When?'. Also, have important helpline numbers just at your fingertips."
     };
     @Override
     public int getCount() {
@@ -67,7 +68,5 @@ public class SliderAdapter extends PagerAdapter {
     public void destroyItem( ViewGroup container, int position, Object object) {
         container.removeView((RelativeLayout)object);
     }
-
-
 
 }

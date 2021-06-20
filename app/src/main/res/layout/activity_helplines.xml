@@ -54,8 +54,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:paddingTop="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +64,7 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?attr/colorSecondary"
             android:orientation="vertical"
@@ -125,7 +125,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -139,7 +138,6 @@
                         android:id="@+id/h108"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="wrap_content"
-
                         android:layout_height="wrap_content"
                         android:text="CALL"
                         android:textColor="?attr/colorPrimary"
@@ -208,7 +206,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -292,7 +290,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -377,7 +374,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -463,7 +460,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -549,7 +546,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -634,7 +631,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -719,7 +716,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -805,7 +802,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -890,7 +887,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -975,7 +972,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1060,7 +1056,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1145,7 +1141,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1229,7 +1226,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="295dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+
+
                     android:background="@drawable/circle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
