@@ -46,8 +46,6 @@ public class EditContacts extends AppCompatActivity {
         dBhandler = new DBhandler(this);
         res = dBhandler.getContacts();
 
-
-
         alt_bld = new AlertDialog.Builder(this, R.style.Theme_AlertDialog_SOS);
         alt_bld.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
@@ -136,16 +134,12 @@ public class EditContacts extends AppCompatActivity {
                                         contactList.add(new listviewbutton(name, num));
                                         listView.setAdapter(adapter);
                                     } else {
-                                        alt_bld.setTitle("");
-                                        alt_bld.setMessage("Could not add contact due to unexpected error.");
                                         listView.setAdapter(adapter);
                                     }
                                     AlertDialog alert = alt_bld.create();
                                     alert.show();
                                 }
                             }
-
-
                         }
                     }
                     break;

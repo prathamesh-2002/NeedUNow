@@ -45,11 +45,12 @@ AlertActivity extends AppCompatActivity {
         dBhandler = new DBhandler(this);
         cRes = dBhandler.getContacts();
         contactList = new String[cRes.getCount()];
-        cRes.moveToFirst();
-        int i = 0;
-        while (cRes.moveToNext()) {
-            contactList[i] = cRes.getString(1);
-            i++;
+        if(cRes.moveToFirst()) {
+            int i = 0;
+            do {
+                contactList[i] = cRes.getString(1);
+                i++;
+            } while (cRes.moveToNext());
         }
 
         Safe.setOnLongClickListener(new View.OnLongClickListener() {

@@ -69,10 +69,11 @@ public class TimerActivity extends AppCompatActivity {
         contactList = new String[cRes.getCount()];
         cRes.moveToFirst();
         int i = 0;
-        while (cRes.moveToNext()) {
-           contactList[i] = cRes.getString(1);
-           i++;
-        }
+        do {
+            contactList[i] = cRes.getString(1);
+            i++;
+        } while (cRes.moveToNext());
+
         mTextViewName = (TextView) findViewById(R.id.NameTextView);
         mTextViewCountDown = (TextView) findViewById(R.id.TimerTextView);
         mTextViewLocation = (TextView) findViewById(R.id.LocationTextView);
