@@ -43,7 +43,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
-        android:background="@drawable/bbg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,14 +52,10 @@
             android:id="@+id/call1073"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bbg"
-            android:fontFamily="@font/semibold"
-            android:text="CALL 1073"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            app:backgroundTint="@android:color/transparent"
-            tools:layout_editor_absoluteX="129dp"
-            tools:layout_editor_absoluteY="374dp" />
+            android:backgroundTint="@color/white"
+            android:textColor="@color/darkGrey"
+            app:cornerRadius="20dp"
+            android:text="CALL 1073" />
 
     </LinearLayout>
 
@@ -104,7 +99,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
         app:layout_constraintVertical_bias="0.0" />

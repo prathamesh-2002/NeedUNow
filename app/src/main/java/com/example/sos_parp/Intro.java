@@ -1,3 +1,4 @@
+
 package com.example.sos_parp;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +18,7 @@ public class Intro extends AppCompatActivity {
     private ViewPager viewPager;
     private SliderAdapter sliderAdapter;
     private TextView[] dots;
-    private Button b1,b2;
+    private Button b2;
     private int current;
     SharedPreferences s1;
     SharedPreferences.Editor editor;
@@ -37,33 +38,23 @@ public class Intro extends AppCompatActivity {
                 finish();
             }
         }
-        b1=(Button)findViewById(R.id.prev);
+
         b2=(Button)findViewById(R.id.next);
         sliderAdapter=new SliderAdapter(this);
         viewPager.setAdapter(sliderAdapter);
         addDots(0);
         viewPager.addOnPageChangeListener(viewL);
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewPager.setCurrentItem(current-1);
 
-            }
-        });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewPager.setCurrentItem(current+1);
-                if(b2.getText()=="Finish"){
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                    editor.putBoolean("check",true).commit();
-
-                }
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                editor.putBoolean("check",true).commit();
             }
         });
     }
     public void addDots(int position){
-        dots=new TextView[3];
+        dots=new TextView[4];
         linearLayout.removeAllViews();
         for(int i=0;i<dots.length;i++){
             dots[i]=new TextView(this);
@@ -85,26 +76,7 @@ public class Intro extends AppCompatActivity {
         @Override
         public void onPageSelected(int position) {
             addDots(position);
-            current=position;
-            if(position==0){
-                b2.setEnabled(true);
-                b1.setEnabled(false);
-                b1.setVisibility(View.INVISIBLE);
-                b2.setText("Next");
-                b1.setText("");
-            }else if (position==dots.length-1){
-                b2.setEnabled(true);
-                b1.setEnabled(true);
-                b1.setVisibility(View.VISIBLE);
-                b2.setText("Finish");
-                b1.setText("Prev");
-            }else {
-                b2.setEnabled(true);
-                b1.setEnabled(true);
-                b1.setVisibility(View.VISIBLE);
-                b2.setText("Next");
-                b1.setText("Prev");
-            }
+
         }
 
         @Override

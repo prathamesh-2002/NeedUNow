@@ -339,7 +339,7 @@
                 android:orientation="vertical"
                 android:text="Other HelpLines"
                 android:textSize="16sp"
-                android:textStyle="bold"
+                android:fontFamily="@font/semibold"
                 android:backgroundTint="?attr/colorSecondary"
                 android:textColor="?attr/colorOnSecondary"
                 app:cornerRadius="20dp" />

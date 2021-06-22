@@ -213,13 +213,13 @@
 
     <!-- Instruction -->
     <string name="instruction1">Instructions</string>
-    <string name="lines1">Register <b>Emergency Contact</b> Numbers.</string>
-    <string name="lines2">Grant all the required Permissions.</string>
-    <string name="lines3">In case of Emergency, press the <b>SOS button</b>. This will send a Panic Message to your registered contacts.</string>
-    <string name="lines4">Specify the type of Emergency in which you\'re trapped by clicking on one of the following options <b>(Women Safety, Accident, Fire)</b> . This will help your friends and family get more concrete information.</string>
-    <string name="lines5">Know more about how to react in various Emergency Situations through <b>TIPS PAGE</b>.</string>
-    <string name="lines6">Get Quick Access to Helpline Numbers under <b>HELPLINE PAGE</b>.</string>
-    <string name="lines7">Edit your Personal Info, Contact Numbers, Panic Message anytime under <b>SETTINGS MENU</b>.</string>
+    <string name="lines1">Please grant all the required Permissions..</string>
+    <string name="lines2">To set up your Profile, Go to -> Settings -> Personal Info</string>
+    <string name="lines3">In case of Emergency, press the SOS button. This will send a Panic Message to your friends/family.</string>
+    <string name="lines4">Specify the type of Emergency in which you\'re trapped by clicking on one of the following options (Women Safety, Accident, Fire). This will help your friends and family get more concrete information.</string>
+    <string name="lines5">Know more about how to react in various Emergency Situations through Tips Screen.</string>
+    <string name="lines6">Get Quick and One Tap Access to Helpline Numbers under Helpline Screen.</string>
+    <string name="lines7">To edit your Personal Info, Contact Numbers, Panic Message anytime, Go to -> Settings -> Choose the operation you want to perform."</string>
     <string name="lines8">We recommend you to always keep your GPS turned ON.</string>
 
     <!--activity_timer-->
@@ -229,5 +229,12 @@
     <!--Alert Message-->
     <string name="alert_msg">\n\n Please reach ASAP to the location below:\n"</string>
 
+    <!-- Permission -->
+    <string name="permission_msg">"Permission to MAKE CALLS is required to Call Helpline Numbers.\n\nPermission to ACCESS CONTACTS is used to set Emergency Contacts.\n\nSEND SMS and ACCESS LOCATION is required to send Panic Message along with Location"</string>
+
+    <!--About Us-->
+    <string name="aboutUsMsg">"The motive of this application is to help people in case of any emergency. NeedUNow allows you to send a Panic Message along with your location to your friends on tap of a single button. With it\'s amazing features like, quick access to Helpline Numbers and Life-Saving Tips, we at NeedUNow want our users to know that we care about them. \nYour life is precious!" </string>
+    <string name="developers">"<b>Developers -</b> \nPrathamesh Punde\nPrathamesh Mane\nAqsa Shaikh\nRohan Golawar"</string>
+    <string name="guidance">"<b>Under the guidance of - </b>\nMrs. A.S.Paike"</string>
 
 </resources>

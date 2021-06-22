@@ -37,12 +37,15 @@ import com.example.sos_parp.PersonalInfo;
 import com.example.sos_parp.R;
 
 public class SettingsActivity extends AppCompatActivity {
-    Dialog dialog, panic;
+
+    Dialog dialog, panic, dialog1;
+    EditText editText;
+    Button button;
     static Switch myswitch;
     CheckBox checkBox;
     public static SharedPref sharedpref,sharedPreferences;
     private Toolbar sToolbar;
-    CardView card1, card2, card3, card4, card5;
+    CardView card1, card2, card3, card4, card5, card6, card7;
     AlertDialog.Builder alt_bld;
     EditText message;
     Button set;
@@ -55,6 +58,7 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         dialog=new Dialog(this);
+        dialog1=new Dialog(this);
         sToolbar = findViewById(R.id.setting_toolbar);
         setSupportActionBar(sToolbar);
         dBhandler = new DBhandler(this);
@@ -76,12 +80,13 @@ public class SettingsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Settings");
 
-
         card1 = (CardView) findViewById(R.id.scard1);
         card2 = (CardView) findViewById(R.id.scard2);
         card3 = (CardView) findViewById(R.id.scard3);
         card4 = (CardView) findViewById(R.id.scard4);
         card5 = (CardView) findViewById(R.id.theme);
+        card6 = (CardView) findViewById(R.id.sfeedback);
+        card7 = (CardView) findViewById(R.id.aboutus);
 
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +112,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getApplication(), HelpCenter.class));
+                startActivity(new Intent(getApplication(), HelpActivity.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
@@ -125,7 +130,41 @@ public class SettingsActivity extends AppCompatActivity {
                 mode(v);
             }
         });
+        card6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                feed(v);
+            }
+        });
 
+        card7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),AboutUs.class));
+            }
+        });
+    }
+
+    private void feed(View v) {
+        dialog1.setContentView(R.layout.feedback);
+
+        editText=(EditText)dialog1.findViewById(R.id.feedback);
+        button=(Button)dialog1.findViewById(R.id.send);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String msg=editText.getText().toString();
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.putExtra(Intent.EXTRA_EMAIL,new String[]{"prathmeshmane334@gmail.com"});
+                email.putExtra(Intent.EXTRA_SUBJECT, "Feedback on app");
+                email.putExtra(Intent.EXTRA_TEXT, msg);
+                email.setType("message/rfc822");
+                email.setPackage("com.google.android.gm");
+                startActivity(email);
+            }
+        });
+        dialog1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog1.show();
     }
 
     private void mode(View view) {
@@ -268,6 +307,10 @@ public class SettingsActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
 
+    }
+
+    public void fback(View view) {
+        dialog1.dismiss();
     }
 
 }

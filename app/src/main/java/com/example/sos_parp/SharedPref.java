@@ -27,7 +27,7 @@ public class SharedPref {
         return  state;
     }
     public Boolean loadDefaultmode (){
-        Boolean state = sharedPreferences.getBoolean("system",false);
+        Boolean state = sharedPreferences.getBoolean("system",true);
         return  state;
     }
 }

@@ -32,4 +32,8 @@ public class T_WomenActivity extends AppCompatActivity {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
+
+    public void closeActivity(View view){
+        onBackPressed();
+    }
 }

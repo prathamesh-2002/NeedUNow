@@ -45,7 +45,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
-        android:background="@drawable/bbg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,14 +54,10 @@
             android:id="@+id/call102"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bbg"
-            android:fontFamily="@font/semibold"
-            android:text="@string/hospitalno"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            app:backgroundTint="@android:color/transparent"
-            tools:layout_editor_absoluteX="129dp"
-            tools:layout_editor_absoluteY="374dp" />
+            android:backgroundTint="@color/white"
+            android:textColor="@color/darkGrey"
+            app:cornerRadius="20dp"
+            android:text="CALL 102" />
 
     </LinearLayout>
 
