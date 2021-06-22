@@ -201,7 +201,7 @@ public class TimerActivity extends AppCompatActivity {
 
         if(getMsgSendAttempts < 3) {
             try {
-                for (int i=0 ; i<contactList.length-1; i++) {
+                for (int i=0 ; i<contactList.length; i++) {
                     smsManager.sendTextMessage(contactList[i], null, res.getString(4) + alertMsg + "https://maps.google.com/?q=" + latitude + "," + longitude + "\n\nEmergency Type: " + eType, null, null);
                 }
                 alertSent();

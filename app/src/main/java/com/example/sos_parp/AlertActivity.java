@@ -82,7 +82,7 @@ AlertActivity extends AppCompatActivity {
 
         if(getMsgSendAttempts < 3) {
             try {
-                for (int i = 0; i<contactList.length-1; i++) {
+                for (int i = 0; i<contactList.length; i++) {
                     smsManager.sendTextMessage(contactList[i], null, "I'm Safe", null, null);
                 }
                 Toast.makeText(getApplicationContext(), "Alert sent!", Toast.LENGTH_LONG).show();
