@@ -7,105 +7,199 @@
     android:background="?attr/colorSecondary"
     tools:context=".PersonalInfo">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:background="@drawable/edittext_normal"
-        android:ems="15"
-        android:maxLength="30"
-        android:fontFamily="@font/regular"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:padding="18dp"
-        android:paddingLeft="20dp"
-        android:textColor="?attr/colorOnSecondary"
-        android:textSize="18dp"
-        android:drawableLeft="@drawable/outline_person_24"
-        android:drawablePadding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_normal"
-        android:ems="15"
-        android:fontFamily="@font/regular"
-        android:hint="Mobile Number"
-        android:inputType="phone"
-        android:paddingTop="18dp"
-        android:paddingLeft="20dp"
-        android:paddingBottom="18dp"
-        android:drawablePadding="10dp"
-        android:textColor="?attr/colorOnSecondary"
-        android:textSize="18dp"
-        android:drawableLeft="@drawable/outline_phone_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.099" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_normal"
-        android:ems="15"
-        android:fontFamily="@font/regular"
-        android:hint="Blood Group"
-        android:inputType="textPersonName"
-        android:padding="18dp"
-        android:paddingLeft="20dp"
-        android:textColor="?attr/colorOnSecondary"
-        android:textSize="18dp"
-        android:drawableLeft="@drawable/outline_bloodtype_24"
-        android:drawablePadding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        app:layout_constraintVertical_bias="0.13" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/semibold"
-        android:text="Personal Info"
-        android:textColor="?colorOnSecondary"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.213"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.666" />
-
     <Button
-        android:id="@+id/button11"
-        android:layout_width="320dp"
+        android:id="@+id/updateInfo"
+        android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="@color/red"
-        android:fontFamily="@font/bold"
-        android:text="Save"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="16dp"
-        app:cornerRadius="50dp"
+        android:foreground="@drawable/outline_how_to_reg_24"
+        android:foregroundGravity="center"
+        android:foregroundTint="@color/white"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="180dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24"
-        app:layout_constraintVertical_bias="0.193" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="120dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="left">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_normal"
+                android:drawableLeft="@drawable/outline_person_24"
+                android:drawablePadding="10dp"
+                android:ems="20"
+                android:fontFamily="@font/regular"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:padding="18dp"
+                android:paddingLeft="20dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_normal"
+                android:drawableLeft="@drawable/outline_bloodtype_24"
+                android:drawablePadding="10dp"
+                android:ems="20"
+                android:fontFamily="@font/regular"
+                android:hint="Blood Group"
+                android:padding="18dp"
+                android:paddingLeft="20dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/algEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_normal"
+                android:drawableLeft="@drawable/outline_block_24"
+                android:drawablePadding="10dp"
+                android:ems="20"
+                android:fontFamily="@font/regular"
+                android:hint="Allergies"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/medEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_normal"
+                android:drawableLeft="@drawable/outline_medication_24"
+                android:drawablePadding="10dp"
+                android:ems="20"
+                android:fontFamily="@font/regular"
+                android:hint="Medications"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/organChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_normal"
+                android:drawableLeft="@drawable/outline_favorite_border_24"
+                android:drawablePadding="10dp"
+                android:ems="20"
+                android:fontFamily="@font/regular"
+                android:hint="Organ donor"
+                android:padding="18dp"
+                android:paddingLeft="20dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/notesEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_normal"
+                android:drawableLeft="@drawable/outline_description_24"
+                android:drawablePadding="10dp"
+                android:ems="20"
+                android:fontFamily="@font/regular"
+                android:hint="Medical notes"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18dp" />
+
+            <CheckBox
+                android:id="@+id/includeCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="14sp"
+                android:text="Include medical information with the alert message." />
+        </LinearLayout>
+    </ScrollView>
+
+    </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorSecondary"
+            android:theme="@style/myToolbar.SOS"
+            app:liftOnScroll="true"
+            android:paddingTop="10dp"
+            >
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:expandedTitleGravity="bottom"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:contentScrim="?attr/colorSecondary"
+                app:scrimAnimationDuration="300"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/personalinfo_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,13 +18,16 @@ public class DBhandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create table personal_info(ID TEXT, Name TEXT, Phone TEXT, BGroup TEXT, Message TEXT)");
+        db.execSQL("Create table personal_info(ID TEXT, Name TEXT, BGroup TEXT, Allergies TEXT, Medications TEXT, ODonor TEXT, MNotes TEXT, Message TEXT, Include TEXT)");
         db.execSQL("Create table contact_info(Name TEXT, Number TEXT primary key)");
         ContentValues contentValues = new ContentValues();
         contentValues.put("ID", "0");
         contentValues.put("Name", "");
-        contentValues.put("Phone", "");
         contentValues.put("BGroup", "");
+        contentValues.put("Allergies", "");
+        contentValues.put("Medications", "");
+        contentValues.put("ODonor", "");
+        contentValues.put("MNotes", "");
         contentValues.put("Message", "Help me! It's an emergency!");
         db.insert("personal_info", null, contentValues);
     }
@@ -35,13 +38,17 @@ public class DBhandler extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Boolean updateDetails(String id, String name, String phone, String bgroup) {
+    public Boolean updateDetails(String id, String name, String bgroup, String alg, String med, String donor, String notes, String include) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("ID", id);
         contentValues.put("Name", name);
-        contentValues.put("Phone", phone);
         contentValues.put("BGroup", bgroup);
+        contentValues.put("Allergies", alg);
+        contentValues.put("Medications", med);
+        contentValues.put("ODonor", donor);
+        contentValues.put("MNotes", notes);
+        contentValues.put("Include", include);
         long result = db.update("personal_info", contentValues, "ID==?", new String[]{id});
         if (result == -1) {
             return false;

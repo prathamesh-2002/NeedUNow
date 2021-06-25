@@ -256,7 +256,7 @@ public class SettingsActivity extends AppCompatActivity {
         set = (Button) panic.findViewById(R.id.MessageSet);
         res = dBhandler.getDetails();
         res.moveToFirst();
-        message.setText(res.getString(4));
+        message.setText(res.getString(7));
         set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -301,8 +301,8 @@ public class SettingsActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
 
-            case R.id.home:
-                finish();
+            case android.R.id.home:
+                onBackPressed();
                 return true;
         }
         return super.onOptionsItemSelected(item);

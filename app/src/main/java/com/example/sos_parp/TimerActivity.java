@@ -40,8 +40,8 @@ public class TimerActivity extends AppCompatActivity {
     DBhandler dBhandler;
     Cursor res, cRes;
     RadioGroup radioGroup;
-    String eType;
-    String[] contactList;
+    String[] contactList, medInfo;
+    StringBuffer medBuffer, emgBuffer;
     private ProgressBar progressBar;
     private Vibrator myVib;
 
@@ -64,8 +64,9 @@ public class TimerActivity extends AppCompatActivity {
 
         dBhandler = new DBhandler(this);
         res = dBhandler.getDetails();
-        res.moveToFirst();
         cRes = dBhandler.getContacts();
+        medBuffer = new StringBuffer();
+        emgBuffer = new StringBuffer();
         contactList = new String[cRes.getCount()];
         cRes.moveToFirst();
         int i = 0;
@@ -73,6 +74,34 @@ public class TimerActivity extends AppCompatActivity {
             contactList[i] = cRes.getString(1);
             i++;
         } while (cRes.moveToNext());
+
+        medInfo = new String[20];
+        res.moveToFirst();
+        int k = 0;
+        for (int j = 2; j<7; j++) {
+            if (res.getString(j).isEmpty()) {
+                medInfo[k] = "";
+            }
+            else {
+                medInfo[k] = res.getString(j);
+            }
+            k++;
+        }
+        if (!medInfo[0].isEmpty()) {
+            medBuffer.append("\nBlood Group: " + medInfo[0]);
+        }
+        if (!medInfo[1].isEmpty()) {
+            medBuffer.append("\nAllergies: " + medInfo[1]);
+        }
+        if (!medInfo[2].isEmpty()) {
+            medBuffer.append("\nMedications: " + medInfo[2]);
+        }
+        if (!medInfo[3].isEmpty()) {
+            medBuffer.append("\nOrgan Donor: " + medInfo[3]);
+        }
+        if (!medInfo[4].isEmpty()) {
+            medBuffer.append("\nMedical Notes: " + medInfo[4]);
+        }
 
         mTextViewName = (TextView) findViewById(R.id.NameTextView);
         mTextViewCountDown = (TextView) findViewById(R.id.TimerTextView);
@@ -104,14 +133,16 @@ public class TimerActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
                     case R.id.radioButton:
-                        eType = "Vehicle Accident";
+                        emgBuffer.append("\n\nEmergency Type: Vehicle Accident");
                         break;
                     case R.id.radioButton2:
-                        eType = "Women intentional harm";
+                        emgBuffer.append("\n\nEmergency Type: Woman Intentional Harm");
                         break;
                     case R.id.radioButton3:
-                        eType = "Fire Outage";
+                        emgBuffer.append("\n\nEmergency Type: Fire Outage");
                         break;
+                    default:
+                        emgBuffer.delete(0, emgBuffer.length());
                 }
             }
         });
@@ -201,8 +232,24 @@ public class TimerActivity extends AppCompatActivity {
 
         if(getMsgSendAttempts < 3) {
             try {
-                for (int i=0 ; i<contactList.length; i++) {
-                    smsManager.sendTextMessage(contactList[i], null, res.getString(4) + alertMsg + "https://maps.google.com/?q=" + latitude + "," + longitude + "\n\nEmergency Type: " + eType, null, null);
+                for (int l=0 ; l<contactList.length; l++) {
+                    smsManager.sendTextMessage(contactList[l],
+                            null,
+                            res.getString(7)
+                                    + alertMsg
+                                    + "https://maps.google.com/?q=" + latitude + "," + longitude
+                                    + emgBuffer,
+                            null,
+                            null);
+
+                    if (Boolean.parseBoolean(res.getString(8))) {
+                        smsManager.sendTextMessage(contactList[l],
+                                null,
+                                "My Medical Information:"
+                                        + medBuffer,
+                                null,
+                                null);
+                    }
                 }
                 alertSent();
             }
