@@ -1,4 +1,3 @@
-
 package com.example.sos_parp;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,7 +33,7 @@ public class Intro extends AppCompatActivity {
         if(s1!=null){
             boolean checkshared=s1.getBoolean("check",false);
             if(checkshared==true){
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),Welcome.class));
                 finish();
             }
         }
@@ -48,8 +47,10 @@ public class Intro extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),Welcome.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 editor.putBoolean("check",true).commit();
+                finish();
             }
         });
     }
@@ -60,11 +61,11 @@ public class Intro extends AppCompatActivity {
             dots[i]=new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(35);
-            dots[i].setTextColor(getResources().getColor(R.color.darkGrey));
+            dots[i].setTextColor(getResources().getColor(R.color.lightGrey));
             linearLayout.addView(dots[i]);
         }
         if(dots.length>0){
-            dots[position].setTextColor(getResources().getColor(R.color.white));
+            dots[position].setTextColor(getResources().getColor(R.color.red));
         }
     }
     ViewPager.OnPageChangeListener viewL=new ViewPager.OnPageChangeListener() {

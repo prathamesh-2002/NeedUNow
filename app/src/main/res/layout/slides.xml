@@ -3,23 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    style="@style/Theme3.SOS">
+    android:layout_height="match_parent">
 
 
         <ImageView
             android:id="@+id/slideimg"
-            android:layout_width="207dp"
-            android:layout_height="185dp"
+            android:layout_width="wrap_content"
+            android:layout_height="312dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="100dp"
-            android:layout_marginLeft="75dp"
-            android:layout_marginTop="106dp"
-            android:layout_marginEnd="103dp"
-            app:tint="@color/lightRed" />
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="79dp"
+            android:layout_marginEnd="14dp" />
 
         <TextView
             android:id="@+id/slidehead"
@@ -28,11 +24,12 @@
             android:layout_below="@+id/slideimg"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="51dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="3dp"
             android:fontFamily="@font/semibold"
             android:gravity="center"
+            android:textColor="?attr/colorOnSecondary"
             android:text="TextView"
             android:textAlignment="center"
             android:textSize="21sp"
@@ -41,15 +38,15 @@
         <TextView
             android:id="@+id/slide"
             android:layout_width="wrap_content"
-            android:layout_height="239dp"
+            android:layout_height="170dp"
             android:layout_below="@+id/slidehead"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="41dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="45dp"
-            android:layout_marginBottom="81dp"
+            android:layout_marginBottom="2dp"
             android:fontFamily="@font/regular"
             android:text="TextView"
             android:textAlignment="center"

@@ -21,10 +21,10 @@ public class SliderAdapter extends PagerAdapter {
         this.context=context;
     }
     public int[] slide_image={
-            R.drawable.logo1,
-            R.drawable.groupon,
-            R.drawable.disconnect,
-            R.drawable.tipsonbg
+            R.drawable.logo2,
+            R.drawable.t1,
+            R.drawable.b1,
+            R.drawable.ui
     };
     public String[] slide_heading={
             "NeedUNow",

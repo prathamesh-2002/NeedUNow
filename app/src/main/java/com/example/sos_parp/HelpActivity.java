@@ -15,15 +15,26 @@ import androidx.appcompat.widget.Toolbar;
 public class HelpActivity extends AppCompatActivity {
 
     Dialog permission;
-    Button p1;
+    Button p1,g1;
+
+    private Toolbar sToolbar;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
 
+        sToolbar = findViewById(R.id.helpcenter_toolbar);
+        setSupportActionBar(sToolbar);
+
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.outline_arrow_back_ios_new_24);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Help Center");
+
         permission = new Dialog(this);
         p1 = (Button) findViewById(R.id.permissions);
+        g1 = (Button) findViewById(R.id.okay);
 
         p1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +42,15 @@ public class HelpActivity extends AppCompatActivity {
                 pDialog(v);
             }
         });
+
+        g1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
     }
 
     public void pDialog(View view) {
@@ -43,7 +63,5 @@ public class HelpActivity extends AppCompatActivity {
         permission.dismiss();
     }
 
-    public void goToHomePage(View view) {
-        finish();
-    }
+
 }

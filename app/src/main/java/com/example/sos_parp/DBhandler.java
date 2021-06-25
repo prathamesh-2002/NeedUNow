@@ -38,6 +38,39 @@ public class DBhandler extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Boolean updateName(String id, String name) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("ID", id);
+        contentValues.put("Name", name);
+        long result = db.update("personal_info", contentValues, "ID==?", new String[]{id});
+        if (result == -1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    public Boolean updateMedInfo(String id, String bgroup, String alg, String med, String donor, String notes, String include) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("ID", id);
+        contentValues.put("BGroup", bgroup);
+        contentValues.put("Allergies", alg);
+        contentValues.put("Medications", med);
+        contentValues.put("ODonor", donor);
+        contentValues.put("MNotes", notes);
+        contentValues.put("Include", include);
+        long result = db.update("personal_info", contentValues, "ID==?", new String[]{id});
+        if (result == -1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
     public Boolean updateDetails(String id, String name, String bgroup, String alg, String med, String donor, String notes, String include) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -126,49 +159,7 @@ public class DBhandler extends SQLiteOpenHelper {
 
     }
 
-    public Boolean validateLogin(String email, String pass){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from login_details where Email==? and Password==?", new String[] {email,pass});
-        if(cursor.getCount()>0)
-            return true;
-        else
-            return false;
-    }
 
-    public boolean insertRecord(String name, String enroll, String dept, String mobile, String email) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("Name", name);
-        contentValues.put("Enrollment", enroll);
-        contentValues.put("Department", dept);
-        contentValues.put("Mobile", mobile);
-        contentValues.put("Email", email);
-        long result = db.insert("student_details", null, contentValues);
-        if (result == -1) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
-
-    public boolean deleteRecord(String enroll) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select *from student_details where Enrollment==?", new String[] {enroll});
-
-        if(cursor.getCount() > 0) {
-            long result = db.delete("student_details", "Enrollment==?", new String[] {enroll});
-            if ( result == -1) {
-                return false;
-            }
-            else {
-                return true;
-            }
-        } else {
-            return false;
-        }
-
-    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

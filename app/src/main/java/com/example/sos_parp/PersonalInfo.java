@@ -19,17 +19,16 @@ import android.widget.Toast;
 public class PersonalInfo extends AppCompatActivity {
 
     private Toolbar sToolbar;
-    EditText name, phone, allergies, medications, mNotes;
+    EditText name, allergies, medications, mNotes;
     TextView bloodGroup, organDonor;
     CheckBox includeMed;
-    Boolean includeFields;
+    Boolean includeFields, check;
     Button save;
     int selectedItem = 9;
     int checkSelect;
-    String bloodGroupList[]={"O+","O-","A+","A-","B+","B-","AB+","AB-","H/H","Unknown"};
-    String organDonorList[]={"Yes","No","Unknown"};
+    String[] bloodGroupList={"O+","O-","A+","A-","B+","B-","AB+","AB-","H/H","Unknown"};
+    String[] organDonorList={"Yes","No","Unknown"};
     AlertDialog.Builder alt_bld, alt_bld1, alt_bld2;
-    Boolean check;
     DBhandler dBhandler;
     Cursor res;
 
@@ -61,9 +60,9 @@ public class PersonalInfo extends AppCompatActivity {
         allergies = (EditText) findViewById(R.id.algEditText);
         medications = (EditText) findViewById(R.id.medEditText);
         mNotes = (EditText) findViewById(R.id.notesEditText);
-        bloodGroup = (TextView) findViewById(R.id.textView24);
+        bloodGroup = (TextView) findViewById(R.id.bloodGroup);
         organDonor = (TextView) findViewById(R.id.organChoice);
-        includeMed = (CheckBox) findViewById(R.id.includeCheckBox);
+        includeMed = (CheckBox) findViewById(R.id.setupIncludeCheck);
         save = (Button) findViewById(R.id.updateInfo);
         dBhandler = new DBhandler(this);
         res = dBhandler.getDetails();
@@ -127,7 +126,6 @@ public class PersonalInfo extends AppCompatActivity {
 
     void dialog(){
 
-        //alt_bld.setIcon(R.drawable.icon);
         alt_bld.setTitle("Blood Type");
         if (checkSelect == 0) {
             for (int i = 0; i < bloodGroupList.length; i++) {
@@ -142,8 +140,7 @@ public class PersonalInfo extends AppCompatActivity {
                 .OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
                 selectedItem = item;
-                Toast.makeText(getApplicationContext(),
-                        "Group Name = "+bloodGroupList[item], Toast.LENGTH_SHORT).show();
+
                 if (item == 9) {
                     bloodGroup.setText("");
                 }
@@ -160,7 +157,6 @@ public class PersonalInfo extends AppCompatActivity {
 
     void dialog1(){
 
-        //alt_bld1.setIcon(R.drawable.icon);
         alt_bld1.setTitle("Organ donor");
         if (checkSelect == 0) {
             for (int i = 0; i < organDonorList.length; i++) {
@@ -175,8 +171,7 @@ public class PersonalInfo extends AppCompatActivity {
                 .OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
                 selectedItem = item;
-                Toast.makeText(getApplicationContext(),
-                        "Group Name = "+organDonorList[item], Toast.LENGTH_SHORT).show();
+
                 if (item == 2) {
                     organDonor.setText("");
                 }

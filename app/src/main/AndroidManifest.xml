@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOS">
         <activity android:name=".Intro"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/Theme4.SOS">
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN"
@@ -28,7 +28,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HelpCenter" />
+
+        <activity android:name=".Welcome" />
+
+        <activity android:name=".MedicalInfo"
+            android:parentActivityName=".Welcome"/>
+
+        <activity android:name=".Contact"
+            android:parentActivityName=".MedicalInfo" />
 
         <activity android:name=".EditContacts"
             android:parentActivityName=".SettingsActivity" />
