@@ -87,6 +87,7 @@
         <item name="android:fontFamily">@font/semibold</item>
         <item name="colorAccent">@color/red</item>
         <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/PositiveButtonStyle</item>
     </style>
 
     <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">

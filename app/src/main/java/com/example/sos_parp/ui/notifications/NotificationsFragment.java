@@ -1,17 +1,25 @@
 package com.example.sos_parp.ui.notifications;
 
 import android.app.Dialog;
+import android.content.ClipData;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
@@ -34,9 +42,9 @@ import org.jetbrains.annotations.NotNull;
 public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
+    public Toolbar myToolbar;
     CardView card1,card2,card3,card4,card5,card6;
     Button button1,button2;
-    Dialog dialog;
     @Override
     public void onViewCreated(@NotNull View view, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +56,18 @@ public class NotificationsFragment extends Fragment {
         card4=(CardView)getView().findViewById(R.id.c4);
         card5=(CardView)getView().findViewById(R.id.c5);
         card6=(CardView)getView().findViewById(R.id.c6);
+        setHasOptionsMenu(false);
+        myToolbar = getView().findViewById(R.id.toolbar);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(myToolbar);
+        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+            actionBar.setHomeAsUpIndicator(R.drawable.outline_help_outline_24);
+            actionBar.setDisplayShowTitleEnabled(false);
+        }
+
+
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,9 +165,14 @@ public class NotificationsFragment extends Fragment {
             }
         });
     }
-
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // TODO Add your menu entries here
+        super.onCreateOptionsMenu(menu, inflater);
+
+    }
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
 
         int id = item.getItemId();
 
@@ -163,7 +188,8 @@ public class NotificationsFragment extends Fragment {
         }
         return super.onOptionsItemSelected(item);
     }
-                 
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -173,7 +199,7 @@ public class NotificationsFragment extends Fragment {
                 new ViewModelProvider(this).get(NotificationsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
         //final TextView textView = root.findViewById(R.id.text_notification);
-
+        View rootView = inflater.inflate(R.layout.fragment_notifications, container, false);
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -181,4 +207,5 @@ public class NotificationsFragment extends Fragment {
         });
         return root;
     }
+
 }

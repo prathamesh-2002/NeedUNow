@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity  {
                             intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                             Uri uri = Uri.fromParts("package", MainActivity.this.getPackageName(), null);
                             intent.setData(uri);
+                            checkPermission();
                             MainActivity.this.startActivity(intent);
                         }
                     });
@@ -171,6 +172,12 @@ public class MainActivity extends AppCompatActivity  {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
     }
 
 }

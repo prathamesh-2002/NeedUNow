@@ -1,7 +1,9 @@
 package com.example.sos_parp.ui.home;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.LayoutInflater;
@@ -14,11 +16,14 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.sos_parp.DBhandler;
+import com.example.sos_parp.EditContacts;
 import com.example.sos_parp.HospitalActivity;
 import com.example.sos_parp.R;
 import com.example.sos_parp.SettingsActivity;
@@ -31,73 +36,59 @@ public class HomeFragment extends Fragment{
     private HomeViewModel homeViewModel;
     TimerActivity timerActivity = new TimerActivity();
     private Vibrator myVib;
+    DBhandler dBhandler;
+    Cursor c;
     Button sButton;
-    long then = 0;
+    AlertDialog.Builder alt_bld;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         myVib = (Vibrator) this.getContext().getSystemService(VIBRATOR_SERVICE);
         sButton=(Button)getView().findViewById(R.id.button);
+        alt_bld = new AlertDialog.Builder(getActivity(), R.style.Theme_AlertDialog_SOS);
+
+        alt_bld.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alt_bld.setNegativeButton("ADD CONTACTS", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getActivity(), EditContacts.class);
+                startActivity(intent);
+            }
+        });
+        dBhandler = new DBhandler(getActivity());
+        c = dBhandler.getContacts();
+        c.moveToFirst();
 
         sButton.setOnLongClickListener(new View.OnLongClickListener() {
 
             @Override
             public boolean onLongClick(View v) {
-                sos();
-                myVib.vibrate(100);
-                return false;
-            }
-            private void sos(){
-                Intent intent = new Intent(getActivity(), TimerActivity.class);
-                getActivity().startActivity(intent);
-            }
-        });
-/*
-        sButton.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    then = (Long) System.currentTimeMillis();
-                }
-                else if (((Long) System.currentTimeMillis() - then) > 3000){
+                c = dBhandler.getContacts();
+                if (c.getCount() > 0) {
                     sos();
+                    myVib.vibrate(100);
+                    return true;
+                }
+                else {
+                    myVib.vibrate(100);
+                    alt_bld.setTitle("Contacts not added");
+                    alt_bld.setMessage("Setup emergency contacts to send alert messages");
+                    alt_bld.show();
                     return false;
                 }
-
-                return false;
             }
             private void sos(){
                 Intent intent = new Intent(getActivity(), TimerActivity.class);
                 getActivity().startActivity(intent);
             }
         });
-
-    /*    sButton.setOnLongClickListener(new View.OnLongClickListener() {
-
-            @Override
-            public boolean onLongClick(View v) {
-
-                sos();
-                return false;
-            }
-
-            private void sos(){
-                Intent intent = new Intent(getActivity(), TimerActivity.class);
-                getActivity().startActivity(intent);
-            }
-        });
-
-     */
-
-  /*      sButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sos();
-            }
-
-        });*/
     }
 
     public View onCreateView (@NonNull LayoutInflater inflater,

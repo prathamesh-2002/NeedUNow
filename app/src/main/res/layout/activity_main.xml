@@ -6,63 +6,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/rounded_toolbar"
-        app:elevation="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="70dp"
+            android:background="@drawable/rounded_toolbar"
+            android:elevation="8dp"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/toolbar_nav_menu" />
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:background="@drawable/rounded_toolbar"
-                android:elevation="8dp"
-                android:minHeight="?attr/actionBarSize"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:menu="@menu/toolbar_nav_menu" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:elevation="10dp"
+            android:src="@drawable/logo1"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintHorizontal_bias="0.337"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533"  />
 
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:elevation="10dp"
-                android:src="@drawable/logo1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/toolbar"
-                app:layout_constraintHorizontal_bias="0.337"
-                app:layout_constraintStart_toStartOf="@+id/toolbar"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.457" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/app_name"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="23dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintHorizontal_bias="0.572"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.516" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:elevation="10dp"
-                android:fontFamily="@font/semibold"
-                android:text="@string/app_name"
-                android:textColor="?attr/colorPrimary"
-                android:textSize="23dp"
-                app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-                app:layout_constraintEnd_toEndOf="@+id/toolbar"
-                app:layout_constraintHorizontal_bias="0.572"
-                app:layout_constraintStart_toStartOf="@+id/toolbar"
-                app:layout_constraintTop_toTopOf="@+id/toolbar"
-                app:layout_constraintVertical_bias="0.516" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

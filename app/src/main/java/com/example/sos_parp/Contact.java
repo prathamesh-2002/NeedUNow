@@ -2,7 +2,10 @@ package com.example.sos_parp;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.app.Activity;
 
 import android.content.Context;
@@ -10,10 +13,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -26,8 +31,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Contact extends AppCompatActivity {
-    public static SharedPref intro;
 
+
+    public static SharedPref intro;
+    private static final int CONTACT_REQUEST_CODE = 123;
     Button save, backButton, editContact;
     private final int REQUEST_CODE = 99;
     List<listviewbutton> contactList;
@@ -37,38 +44,38 @@ public class Contact extends AppCompatActivity {
     Boolean check;
     MyCustomListAdapter adapter;
     static Boolean exists = false;
-    AlertDialog.Builder alt_bld;
+    AlertDialog.Builder alt_bld, builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
+        checkContactPermission();
         //Shared Pref
         intro = new SharedPref(this);
 
         DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                switch (which){
+                switch (which) {
                     case DialogInterface.BUTTON_POSITIVE:
-                        dialog.dismiss();
+                        Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+                        startActivityForResult(intent, REQUEST_CODE);
                         break;
 
                     case DialogInterface.BUTTON_NEGATIVE:
                         intro.setIntro(true);
-                        Intent intent = new Intent(getApplication(), MainActivity.class);
-                        startActivity(intent);
-                        finish();
+                        Intent sIntent = new Intent(getApplication(), MainActivity.class);
+                        startActivity(sIntent);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         break;
                 }
             }
         };
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder = new AlertDialog.Builder(this);
 
         save = (Button) findViewById(R.id.b_next);
-
-
         //End of Shared Pref
 
         dBhandler = new DBhandler(this);
@@ -98,11 +105,11 @@ public class Contact extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-                startActivityForResult(intent,REQUEST_CODE);
+                startActivityForResult(intent, REQUEST_CODE);
             }
         });
 
-        backButton=(Button) findViewById(R.id.backButton);
+        backButton = (Button) findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,8 +124,7 @@ public class Contact extends AppCompatActivity {
                     builder.setTitle("Contacts not added");
                     builder.setMessage("Setup emergency contacts to send alert messages").setPositiveButton("Add Contacts", dialogClickListener)
                             .setNegativeButton("Do it later", dialogClickListener).show();
-                }
-                else {
+                } else {
                     intro.setIntro(true);
                     Intent intent = new Intent(getApplication(), MainActivity.class);
                     startActivity(intent);
@@ -128,6 +134,55 @@ public class Contact extends AppCompatActivity {
         });
 
     }
+
+    protected void checkContactPermission() {
+        if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_CONTACTS)
+                == PackageManager.PERMISSION_GRANTED) {
+
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{
+                            Manifest.permission.READ_CONTACTS,
+                    },
+                    CONTACT_REQUEST_CODE
+            );
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults){
+        if (requestCode == CONTACT_REQUEST_CODE) {
+
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+            }
+            else {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setCancelable(false);
+                builder.setMessage("Contact Permission is mandatory for functioning of the app");
+                builder.setTitle("Permissions required");
+                builder.setPositiveButton("Go To Settings", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent();
+                        intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        Uri uri = Uri.fromParts("package",getPackageName(), null);
+                        intent.setData(uri);
+                        checkContactPermission();
+                        Contact.this.startActivity(intent);
+
+                    }
+                });
+                AlertDialog dialog = builder.create();
+
+                dialog.show();
+
+            }
+        }
+
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
