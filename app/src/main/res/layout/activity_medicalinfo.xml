@@ -177,6 +177,22 @@
                 android:textSize="14sp"
                 android:text="Include medical information with the alert message." />
 
+            <TextView
+                android:id="@+id/noteAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/note_drawable"
+                android:drawableLeft="@drawable/outline_info_24"
+                android:drawableTint="?attr/colorPrimary"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Leave the fields empty that you wish not to include"
+                android:padding="18dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="14sp" />
+
         </LinearLayout>
     </ScrollView>
 

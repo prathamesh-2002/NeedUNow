@@ -143,7 +143,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String msg=editText.getText().toString();
                 Intent email = new Intent(Intent.ACTION_SEND);
-                email.putExtra(Intent.EXTRA_EMAIL,new String[]{"prathmeshmane334@gmail.com"});
+                email.putExtra(Intent.EXTRA_EMAIL,new String[]{"needunoworg@gmail.com"});
                 email.putExtra(Intent.EXTRA_SUBJECT, "Feedback on app");
                 email.putExtra(Intent.EXTRA_TEXT, msg);
                 email.setType("message/rfc822");

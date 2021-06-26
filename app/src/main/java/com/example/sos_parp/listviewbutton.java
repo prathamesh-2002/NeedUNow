@@ -27,7 +27,7 @@ public class listviewbutton {
         } else {
             for (int i = 0; i < phone.length(); i++) {
                 // remove any spaces or "-"
-                if (phone.charAt(i) != '-' || phone.charAt(i) != ' ') {
+                if (phone.charAt(i) != '-' && phone.charAt(i) != ' ') {
                     case2.append(phone.charAt(i));
                 }
             }

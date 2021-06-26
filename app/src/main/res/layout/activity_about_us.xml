@@ -59,6 +59,7 @@
                     android:textAlignment="center"
                     android:text="@string/developers"
                     android:textSize="18sp"
+                    android:textColor="?attr/colorOnSecondary"
                     android:fontFamily="@font/regular" />
 
                 <TextView
@@ -71,6 +72,7 @@
                     android:textAlignment="center"
                     android:text="@string/guidance"
                     android:textSize="18sp"
+                    android:textColor="?attr/colorOnSecondary"
                     android:fontFamily="@font/regular" />
 
             </LinearLayout>

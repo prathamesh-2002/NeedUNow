@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,58 +9,114 @@
     android:background="?attr/colorSecondary"
     tools:context=".EditContacts">
 
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="15dp"
-        android:foregroundGravity="center"
-        android:foregroundTint="?attr/colorOnSecondary"
-        android:background="@android:color/transparent"
-        android:foreground="@drawable/outline_arrow_back_ios_new_24" />
-
-    <TextView
-        android:id="@+id/textView25"
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/floating_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginRight="30dp"
-        android:text="Contacts"
-        android:textColor="?attr/colorOnSecondary"
-        android:fontFamily="@font/semibold"
-        android:textSize="35sp" />
+        android:layout_gravity="bottom|center"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:clickable="true"
+        android:text="ADD CONTACT"
+        android:textColor="@color/white"
+        app:icon="@drawable/outline_person_add_24"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
+
+    <ImageView
+        android:id="@+id/editBg"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="180dp" />
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/c3" />
+
+    <TextView
+        android:id="@+id/editBgText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="No contacts added"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:fontFamily="@font/regular"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/editBg"
+        app:layout_constraintEnd_toEndOf="@+id/editBg"
+        app:layout_constraintStart_toStartOf="@+id/editBg"
+        app:layout_constraintTop_toTopOf="@+id/editBg"
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/edit_contact"
+        android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="147dp">
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/floating_button"
-            android:layout_width="wrap_content"
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp"
+            android:fillViewport="true"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:layout_margin="20dp"
-            android:textColor="@color/white"
-            android:backgroundTint="?attr/colorPrimary"
-            android:clickable="true"
-            android:text="ADD CONTACT"
-            app:iconTint="@color/white"
-            app:icon="@drawable/outline_person_add_24"
-            />
+            android:backgroundTint="?attr/colorSecondary"
+            android:paddingTop="10dp"
+            android:theme="@style/myToolbar.SOS"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="?attr/colorSecondary"
+                app:expandedTitleGravity="bottom"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:scrimAnimationDuration="300"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+
+                    />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/editcontact_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

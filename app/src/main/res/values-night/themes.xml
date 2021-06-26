@@ -33,7 +33,7 @@
 
     <style name="Theme1.SOS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/red</item>
-        <item name="colorPrimaryVariant">@color/red2</item>
+        <item name="colorPrimaryVariant">@color/red</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/darkBackground</item>
@@ -41,6 +41,7 @@
         <item name="colorOnSecondary">@color/white</item>
         <item name="colorAccent">@color/red</item>
         <item name="android:windowBackground">@color/darkBackground</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
     </style>
 
     <style name="Theme.AppCompat.Transparent.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -80,9 +81,8 @@
         <item name="colorSecondaryVariant">@color/red</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="android:windowBackground">@color/darkToolNav</item>
-
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/darkToolNav</item>
         <!-- Customize your theme here. -->
     </style>
 

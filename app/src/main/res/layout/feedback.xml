@@ -20,80 +20,73 @@
 
 
             <ImageView
-                android:id="@+id/fback"
-
-                android:layout_width="60dp"
-                android:layout_height="40dp"
-                android:onClick="fback"
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:onClick="dialogClose"
                 android:rotation="180"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/feedback"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.022"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/outline_chevron_right_24"
-                app:tint="@color/red"
+                app:tint="?attr/colorOnSecondary"
                 tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:id="@+id/feedbackTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Feedback"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/feedback"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <EditText
                 android:id="@+id/feedback"
                 android:layout_width="247dp"
                 android:layout_height="183dp"
-                android:textColor="?attr/colorOnSecondary"
                 android:background="@drawable/edittext_dialog"
                 android:ems="10"
                 android:gravity="start"
-                android:hint="Tell us what you think about us😊"
+                android:hint="We would love to hear from you..."
                 android:inputType="textMultiLine"
-                android:paddingLeft="15dp"
+                android:paddingLeft="10dp"
                 android:paddingTop="20dp"
+                android:paddingRight="10dp"
+                android:textColor="?attr/colorOnSecondary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.38" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/feedsend"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edittext_dialog"
+            <Button
+                android:id="@+id/send"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/semibold"
+                android:backgroundTint="@color/red"
+                android:text="Send"
+                android:drawableEnd="@drawable/outline_send_24"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"
+                app:cornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/feedback">
-
-
-                <Button
-                    android:id="@+id/send"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Send"
-                    android:paddingRight="35dp"
-                    android:textColor="?attr/colorPrimary"
-                    app:backgroundTint="@android:color/transparent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.652" />
-
-                <ImageView
-                    android:id="@+id/sendicoon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center"
-                    android:src="@drawable/outline_send_24"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/send"
-                    app:layout_constraintHorizontal_bias="0.843"
-                    app:layout_constraintStart_toStartOf="@+id/send"
-                    app:layout_constraintTop_toTopOf="@+id/send"
-                    app:tint="@color/red">
-
-                </ImageView>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintTop_toBottomOf="@+id/feedback" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

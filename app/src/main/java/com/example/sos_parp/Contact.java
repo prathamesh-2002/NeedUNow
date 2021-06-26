@@ -21,7 +21,9 @@ import android.provider.ContactsContract;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sos_parp.ui.home.HomeViewModel;
@@ -36,13 +38,14 @@ public class Contact extends AppCompatActivity {
     public static SharedPref intro;
     private static final int CONTACT_REQUEST_CODE = 123;
     Button save, backButton, editContact;
+    static ImageView bg;
     private final int REQUEST_CODE = 99;
     List<listviewbutton> contactList;
     ListView listView;
     DBhandler dBhandler;
     Cursor res;
     Boolean check;
-    MyCustomListAdapter adapter;
+    MySetupListAdapter adapter;
     static Boolean exists = false;
     AlertDialog.Builder alt_bld, builder;
 
@@ -51,6 +54,7 @@ public class Contact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
+        bg = (ImageView) findViewById(R.id.contactBackground);
         checkContactPermission();
         //Shared Pref
         intro = new SharedPref(this);
@@ -74,7 +78,6 @@ public class Contact extends AppCompatActivity {
             }
         };
         builder = new AlertDialog.Builder(this);
-
         save = (Button) findViewById(R.id.b_next);
         //End of Shared Pref
 
@@ -96,14 +99,17 @@ public class Contact extends AppCompatActivity {
         }
 
         listView = findViewById(R.id.setupListview);
-        adapter = new MyCustomListAdapter(this, R.layout.set_edit_contact, contactList);
+        adapter = new MySetupListAdapter(this, R.layout.set_edit_contact, contactList);
         listView.setAdapter(adapter);
+
+        if (adapter.isEmpty()) {
+            bg.setVisibility(View.VISIBLE);
+        }
 
         editContact = findViewById(R.id.b_addContact);
         editContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
                 startActivityForResult(intent, REQUEST_CODE);
             }
@@ -171,7 +177,6 @@ public class Contact extends AppCompatActivity {
                         intent.setData(uri);
                         checkContactPermission();
                         Contact.this.startActivity(intent);
-
                     }
                 });
                 AlertDialog dialog = builder.create();
@@ -189,7 +194,7 @@ public class Contact extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         listView = findViewById(R.id.setupListview);
-        adapter = new MyCustomListAdapter(this, R.layout.set_edit_contact, contactList);
+        adapter = new MySetupListAdapter(this, R.layout.set_edit_contact, contactList);
         dBhandler = new DBhandler(this);
         res = dBhandler.getContacts();
         res.moveToFirst();
@@ -229,14 +234,11 @@ public class Contact extends AppCompatActivity {
                                     check = dBhandler.insertContacts(new listviewbutton(name, num));
 
                                     if (check == true) {
-                                        alt_bld.setTitle("");
-                                        alt_bld.setMessage("Contact was added successfully");
                                         contactList.add(new listviewbutton(name, num));
+                                        bg.setVisibility(View.INVISIBLE);
                                     }
                                     listView.setAdapter(adapter);
                                     adapter.notifyDataSetChanged();
-                                    AlertDialog alert = alt_bld.create();
-                                    alert.show();
                                 }
                             }
                         }

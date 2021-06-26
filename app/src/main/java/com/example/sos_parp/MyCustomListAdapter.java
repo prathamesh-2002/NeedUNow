@@ -1,5 +1,4 @@
 package com.example.sos_parp;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -8,12 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import java.util.List;
+
+import static com.example.sos_parp.EditContacts.bg1;
+import static com.example.sos_parp.EditContacts.bgText1;
 
 public class MyCustomListAdapter extends ArrayAdapter<listviewbutton> {
 
@@ -71,15 +70,17 @@ public class MyCustomListAdapter extends ArrayAdapter<listviewbutton> {
                 dBhandler = new DBhandler(getContext());
                 check = dBhandler.deleteContacts(contactList.get(position));
                 if (check == true) {
-                    alt.setTitle("");
-                    alt.setMessage("Contact deleted");
                     contactList.remove(position);
+                    if (isEmpty()) {
+                        bg1.setVisibility(View.VISIBLE);
+                        bgText1.setVisibility(View.VISIBLE);
+                    }
                 }
                 else {
                     alt.setTitle("");
                     alt.setMessage("Could not delete contact");
+                    alt.show();
                 }
-                alt.show();
                 notifyDataSetChanged();
             }
         });

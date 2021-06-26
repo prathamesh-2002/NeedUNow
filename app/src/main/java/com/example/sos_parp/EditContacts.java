@@ -3,6 +3,7 @@ package com.example.sos_parp;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -14,6 +15,7 @@ import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,9 +27,11 @@ import java.util.List;
 
 public class EditContacts extends AppCompatActivity {
 
+    static ImageView bg1;
+    static TextView bgText1;
+    private Toolbar sToolbar;
     private final int REQUEST_CODE = 99;
     public ExtendedFloatingActionButton editContact;
-    Button back;
     List<listviewbutton> contactList;
     ListView listView;
     DBhandler dBhandler;
@@ -41,7 +45,15 @@ public class EditContacts extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_contacts);
 
-        back = (Button) findViewById(R.id.backButton);
+        sToolbar = findViewById(R.id.editcontact_toolbar);
+        setSupportActionBar(sToolbar);
+
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.outline_arrow_back_ios_new_24);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Edit Contacts");
+
+        bg1 = (ImageView) findViewById(R.id.editBg);
+        bgText1 = (TextView) findViewById(R.id.editBgText);
         dBhandler = new DBhandler(this);
         res = dBhandler.getContacts();
 
@@ -64,12 +76,10 @@ public class EditContacts extends AppCompatActivity {
         MyCustomListAdapter adapter = new MyCustomListAdapter(this, R.layout.set_edit_contact, contactList);
         listView.setAdapter(adapter);
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        if (adapter.isEmpty()) {
+            bg1.setVisibility(View.VISIBLE);
+            bgText1.setVisibility(View.VISIBLE);
+        }
 
         editContact = findViewById(R.id.floating_button);
         editContact.setOnClickListener(new View.OnClickListener() {
@@ -128,13 +138,11 @@ public class EditContacts extends AppCompatActivity {
                                     check = dBhandler.insertContacts(new listviewbutton(name, num));
 
                                     if (check == true) {
-                                        alt_bld.setTitle("");
-                                        alt_bld.setMessage("Contact was added successfully");
                                         contactList.add(new listviewbutton(name, num));
+                                        bg1.setVisibility(View.INVISIBLE);
+                                        bgText1.setVisibility(View.INVISIBLE);
                                     }
                                     listView.setAdapter(adapter);
-                                    AlertDialog alert = alt_bld.create();
-                                    alert.show();
                                 }
                             }
                         }

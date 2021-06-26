@@ -36,7 +36,7 @@ public class SliderAdapter extends PagerAdapter {
     public String[] slide_des={
             "NeedUNow is your one tap life saver. Feel secure about your friends/family with NeedUNow",
             "Tackle any sticky situation just on the press of one button and send an alert message to your friends/family.",
-            "NeedUNow uses the traditional messaging method and so works even offline. The Panic Message along with you current location will be sent to your Emergency Contacts.",
+            "NeedUNow uses the traditional messaging method and so works even offline. The Panic Message along with your current location will be sent to your Emergency Contacts.",
             "Find a guide for all Emergency Situation to better understand 'What to do When?'. Also, have important helpline numbers just at your fingertips."
     };
     @Override
