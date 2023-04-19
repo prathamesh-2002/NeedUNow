@@ -1,7 +1,7 @@
 
 # NeedUNow
 
-NeedUNow is an Android Appliication which allows you to send panic messages to your emergency contacts at a tap of single button, gestures or patterned pressing of power button.
+NeedUNow is an Android Application which allows you to send panic messages to your emergency contacts at a tap of single button, gestures or patterned pressing of power button.
 
 
 
