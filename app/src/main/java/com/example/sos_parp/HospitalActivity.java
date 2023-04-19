@@ -46,5 +46,9 @@ public class HospitalActivity extends AppCompatActivity {
         getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 
-
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.nav_default_enter_anim, R.anim.slide_down);
+    }
 }

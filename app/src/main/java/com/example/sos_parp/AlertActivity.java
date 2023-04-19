@@ -99,4 +99,9 @@ AlertActivity extends AppCompatActivity {
             Toast.makeText(this, "Alert could not be sent. Try again.", Toast.LENGTH_LONG).show();
         }
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

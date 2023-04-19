@@ -42,6 +42,7 @@ public class TimerActivity extends AppCompatActivity {
     RadioGroup radioGroup;
     String[] contactList, medInfo;
     StringBuffer medBuffer, emgBuffer;
+    Boolean entered;
     private ProgressBar progressBar;
     private Vibrator myVib;
 
@@ -87,20 +88,39 @@ public class TimerActivity extends AppCompatActivity {
             }
             k++;
         }
-        if (!medInfo[0].isEmpty()) {
-            medBuffer.append("\nBlood Group: " + medInfo[0]);
+
+        if (Boolean.parseBoolean(res.getString(8))) {
+
+            for (int m = 0; m<5; m++) {
+                if (!medInfo[m].isEmpty()) {
+                    entered = true;
+                    break;
+                }
+                else {
+                    entered = false;
+                }
+            }
+            if (entered) {
+                medBuffer.append("\n\nMedical Information:");
+            }
+            if (!medInfo[0].isEmpty()) {
+                medBuffer.append("\nBlood Group: " + medInfo[0]);
+            }
+            if (!medInfo[1].isEmpty()) {
+                medBuffer.append("\nAllergies: " + medInfo[1]);
+            }
+            if (!medInfo[2].isEmpty()) {
+                medBuffer.append("\nMedications: " + medInfo[2]);
+            }
+            if (!medInfo[3].isEmpty()) {
+                medBuffer.append("\nOrgan Donor: " + medInfo[3]);
+            }
+            if (!medInfo[4].isEmpty()) {
+                medBuffer.append("\nMedical Notes: " + medInfo[4]);
+            }
         }
-        if (!medInfo[1].isEmpty()) {
-            medBuffer.append("\nAllergies: " + medInfo[1]);
-        }
-        if (!medInfo[2].isEmpty()) {
-            medBuffer.append("\nMedications: " + medInfo[2]);
-        }
-        if (!medInfo[3].isEmpty()) {
-            medBuffer.append("\nOrgan Donor: " + medInfo[3]);
-        }
-        if (!medInfo[4].isEmpty()) {
-            medBuffer.append("\nMedical Notes: " + medInfo[4]);
+        else {
+            medBuffer.delete(0, medBuffer.length());
         }
 
         mTextViewName = (TextView) findViewById(R.id.NameTextView);
@@ -133,12 +153,15 @@ public class TimerActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
                     case R.id.radioButton:
+                        emgBuffer.delete(0, emgBuffer.length());
                         emgBuffer.append("\n\nEmergency Type: Vehicle Accident");
                         break;
                     case R.id.radioButton2:
+                        emgBuffer.delete(0, emgBuffer.length());
                         emgBuffer.append("\n\nEmergency Type: Woman Intentional Harm");
                         break;
                     case R.id.radioButton3:
+                        emgBuffer.delete(0, emgBuffer.length());
                         emgBuffer.append("\n\nEmergency Type: Fire Outage");
                         break;
                     default:
@@ -232,24 +255,18 @@ public class TimerActivity extends AppCompatActivity {
 
         if(getMsgSendAttempts < 3) {
             try {
+                String parts = res.getString(7)
+                        + alertMsg
+                        + "https://maps.google.com/?q=" + latitude + "," + longitude
+                        + emgBuffer
+                        + medBuffer;
+                ArrayList<String> fMessage = smsManager.divideMessage(parts);
                 for (int l=0 ; l<contactList.length; l++) {
-                    smsManager.sendTextMessage(contactList[l],
+                    smsManager.sendMultipartTextMessage(contactList[l],
                             null,
-                            res.getString(7)
-                                    + alertMsg
-                                    + "https://maps.google.com/?q=" + latitude + "," + longitude
-                                    + emgBuffer,
+                            fMessage,
                             null,
                             null);
-
-                    if (Boolean.parseBoolean(res.getString(8))) {
-                        smsManager.sendTextMessage(contactList[l],
-                                null,
-                                "My Medical Information:"
-                                        + medBuffer,
-                                null,
-                                null);
-                    }
                 }
                 alertSent();
             }
@@ -272,11 +289,14 @@ public class TimerActivity extends AppCompatActivity {
         finish();
     }
 
-
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mCountDownTimer.cancel();
+    }
+
+    @Override
+    public void onBackPressed() {
+        
     }
 }

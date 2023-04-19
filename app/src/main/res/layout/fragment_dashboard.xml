@@ -21,16 +21,17 @@
             app:menu="@menu/toolbar_nav_menu" />
 
         <ImageView
+            android:id="@+id/imageView24"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:elevation="10dp"
             android:src="@drawable/logo1"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-            app:layout_constraintEnd_toEndOf="@+id/toolbar"
-            app:layout_constraintHorizontal_bias="0.337"
+            app:layout_constraintEnd_toStartOf="@+id/textView000"
+            app:layout_constraintHorizontal_bias="0.942"
             app:layout_constraintStart_toStartOf="@+id/toolbar"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.533" />
+            app:layout_constraintVertical_bias="0.514" />
 
         <TextView
             android:id="@+id/textView000"
@@ -43,10 +44,10 @@
             android:textSize="23dp"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintEnd_toEndOf="@+id/toolbar"
-            app:layout_constraintHorizontal_bias="0.572"
+            app:layout_constraintHorizontal_bias="0.591"
             app:layout_constraintStart_toStartOf="@+id/toolbar"
             app:layout_constraintTop_toTopOf="@+id/toolbar"
-            app:layout_constraintVertical_bias="0.516"
+            app:layout_constraintVertical_bias="0.45"
             tools:ignore="DuplicateIds" />
 
 
@@ -101,7 +102,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/t_c1"
-                android:layout_width="363dp"
+                android:layout_width="335dp"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
@@ -173,7 +174,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/t_c2"
-                android:layout_width="363dp"
+                android:layout_width="335dp"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
@@ -239,7 +240,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/t_c3"
-                android:layout_width="363dp"
+                android:layout_width="335dp"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
@@ -309,7 +310,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/t_c4"
-                android:layout_width="363dp"
+                android:layout_width="335dp"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
@@ -382,7 +383,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/t_c5"
-                android:layout_width="363dp"
+                android:layout_width="335dp"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
@@ -453,7 +454,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/t_c6"
-                android:layout_width="363dp"
+                android:layout_width="335dp"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
@@ -524,7 +525,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/t_c7"
-                android:layout_width="363dp"
+                android:layout_width="335dp"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
@@ -594,7 +595,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/t_c8"
-                android:layout_width="363dp"
+                android:layout_width="335dp"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"

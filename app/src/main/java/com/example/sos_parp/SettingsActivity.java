@@ -25,7 +25,7 @@ import androidx.cardview.widget.CardView;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    Dialog dialog, panic, dialog1;
+    Dialog dialog, panic, feedback;
     EditText editText;
     Button button;
     static Switch myswitch;
@@ -44,8 +44,8 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        dialog=new Dialog(this);
-        dialog1=new Dialog(this);
+        dialog = new Dialog(this);
+        feedback = new Dialog(this);
         sToolbar = findViewById(R.id.setting_toolbar);
         setSupportActionBar(sToolbar);
         dBhandler = new DBhandler(this);
@@ -134,10 +134,10 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void feed(View v) {
-        dialog1.setContentView(R.layout.feedback);
+        feedback.setContentView(R.layout.feedback);
 
-        editText=(EditText)dialog1.findViewById(R.id.feedback);
-        button=(Button)dialog1.findViewById(R.id.send);
+        editText=(EditText) feedback.findViewById(R.id.feedback);
+        button=(Button) feedback.findViewById(R.id.send);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,8 +151,8 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(email);
             }
         });
-        dialog1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog1.show();
+        feedback.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        feedback.show();
     }
 
     private void mode(View view) {
@@ -248,13 +248,18 @@ public class SettingsActivity extends AppCompatActivity {
         set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Boolean check = dBhandler.updatePanicMessage("0", message.getText().toString());
-                alt_bld.setTitle("");
-                if (check == true) {
-                    alt_bld.setMessage("Your panic message was updated");
+                if (message.getText().toString().isEmpty()) {
+                    alt_bld.setTitle("");
+                    alt_bld.setMessage("Alert message cannot be empty");
                 }
                 else {
-                    alt_bld.setMessage("Could not update message due to unexpected error.");
+                    Boolean check = dBhandler.updatePanicMessage("0", message.getText().toString());
+                    alt_bld.setTitle("");
+                    if (check == true) {
+                        alt_bld.setMessage("Your panic message was updated");
+                    } else {
+                        alt_bld.setMessage("Could not update message due to unexpected error.");
+                    }
                 }
                 AlertDialog alert = alt_bld.create();
                 alert.show();
@@ -278,12 +283,6 @@ public class SettingsActivity extends AppCompatActivity {
         dialog.cancel();
     }
 
-    public void dialogClose(View view) {
-        panic.dismiss();
-    }
-
-
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
@@ -294,11 +293,14 @@ public class SettingsActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-
     }
 
-    public void fback(View view) {
-        dialog1.dismiss();
+    public void panicClose(View view) {
+        panic.dismiss();
+    }
+
+    public void feedbackClose(View view) {
+        feedback.dismiss();
     }
 
 }
